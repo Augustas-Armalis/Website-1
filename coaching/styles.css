@@ -60,10 +60,12 @@
   @media (max-width: 991px) {
     h1 {
       font-size: 36px;
+      line-height: 120%;
     }
 
     h2 {
       font-size: 30px;
+      line-height: 120%;
     }
 
     h3 {
@@ -75,10 +77,12 @@
   @media (max-width: 599px) {
     h1 {
       font-size: 28px;
+      line-height: 120%;
     }
 
     h2 {
       font-size: 24px;
+      line-height: 120%;
     }
 
     h3 {
@@ -99,14 +103,16 @@
     justify-content: center;
     height: fit-content;
     position: relative;
+    overflow: hidden;
   }
 
   .logo {
-    position: fixed;
+    position: absolute;
     margin-top: 32px;
     margin-left: 32px;
     width: auto;
     height: 45px;
+    z-index: 999999;
   }
 
 
@@ -151,8 +157,7 @@
     display: flex;
     max-width: 1200px;
     width: 100%;
-    margin-top: 64px;
-    margin-bottom: 64px;
+    margin: 64px;
     overflow: visible;
     box-sizing: border-box;
     position: relative;
@@ -172,8 +177,6 @@
     font-family: "Quicksand";
     font-style: normal;
     font-weight: 500;
-    line-height: 48px;
-    /* 150% */
   }
 
   .hero-section-left-side {
@@ -258,3 +261,97 @@
 
 
   /* You're not the only one section */
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+
+  .logo {
+    margin-top: 24px;
+    margin-left: 24px;
+    width: auto;
+    height: 40px;
+  }
+
+
+   /* Hero section */
+
+   .hero-section{
+    gap: 32px;
+   }
+
+}
+
+
+
+
+
+
+
+
+@media (max-width: 599px) {
+
+  .logo {
+    margin-top: 16px;
+    margin-left: 16px;
+    width: auto;
+    height: 30px;
+  }
+
+
+
+
+
+
+ /* Hero section */
+
+  .hero-section {
+    flex-direction: column;
+    padding-top: 48px;
+    width: 100%;
+    margin: 32px;
+    gap:48px;
+  }
+
+  .hero-section-title{
+    text-align: center;
+  }
+
+  .hero-section-alt-text{
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .hero-section-button-and-arrow{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-section-arrow{
+    display: none;
+  }
+
+  .image-container {
+    display: none;
+  }
+
+  .hero-section-blur-top,
+  .hero-section-blur-bottom {
+    width: 1000;
+    height: 140px;
+    flex-shrink: 0;
+    border-radius: 1200px;
+    background: #0FF486;
+    filter: blur(60px);
+    position: absolute;
+    align-self: center;
+  }
+
+  }
