@@ -38,3 +38,20 @@ buttons.forEach(button => {
     icon.classList.toggle('rotate');
   })
 })
+
+
+let lastScrollTop = 0;
+window.addEventListener('scroll', function () {
+  const logo = document.querySelector('.logo');
+  let scrollTop = window.scrollY;
+
+  if (scrollTop > lastScrollTop) {
+    // Scrolling down
+    logo.classList.add('hidden');
+  } else {
+    // Scrolling up
+    logo.classList.remove('hidden');
+  }
+
+  lastScrollTop = scrollTop;
+});

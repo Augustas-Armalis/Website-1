@@ -116,12 +116,22 @@ h3 {
 
 .logo {
   position: fixed;
-  margin-top: 32px;
-  margin-left: 32px;
+  top: 32px;
+  left: 32px;
   width: auto;
   height: 45px;
   z-index: -5;
+  /* Make sure it is above other elements */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
+
+.logo.hidden {
+  transform: translateY(-100%);
+  /* Moves the logo out of view */
+  opacity: 0;
+  /* Hides the logo */
+}
+
 
 #offer {
   display: flex;
@@ -1199,8 +1209,8 @@ footer {
 @media (max-width: 599px) {
 
   .logo {
-    margin-top: 16px;
-    margin-left: 16px;
+    top: 0;
+    left: 0;
     width: auto;
     height: 30px;
   }
