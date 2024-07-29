@@ -2,7 +2,6 @@ html {
   scroll-behavior: smooth;
   scroll-padding: 7rem;
   overflow-x: hidden;
-  width: 100vw;
 }
 
 img {
@@ -116,12 +115,12 @@ h3 {
 }
 
 .logo {
-  position: absolute;
+  position: fixed;
   margin-top: 32px;
   margin-left: 32px;
   width: auto;
   height: 45px;
-  z-index: 999999;
+  z-index: -5;
 }
 
 #offer {
@@ -188,7 +187,6 @@ h3 {
 }
 
 .hero-section-alt-text {
-  color: #9AC63E;
   margin-bottom: 64px;
   color: #9AC63E;
   font-family: "Quicksand";
@@ -1059,7 +1057,14 @@ footer {
 
 
 
-
+.border-too-big-glow {
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
 
 
 
@@ -1165,8 +1170,6 @@ footer {
     margin-bottom: 64px;
   }
 
-  .expectations-title-section {}
-
   .expectations-button {
     margin-bottom: 64px;
   }
@@ -1182,6 +1185,9 @@ footer {
 
 
 }
+
+
+
 
 
 
