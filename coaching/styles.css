@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding: 7rem;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 img {
