@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 7rem;
+}
+
 img {
   pointer-events: none;
 }
@@ -115,6 +120,14 @@ h3 {
   width: auto;
   height: 45px;
   z-index: 999999;
+}
+
+#offer {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
 }
 
 
@@ -613,6 +626,7 @@ h3 {
   border-radius: 20px;
   background: #E6E6E6;
   box-shadow: 0px 0px 200px 0px rgba(15, 244, 134, 0.50);
+  cursor: pointer;
 }
 
 .film-image {
@@ -625,6 +639,129 @@ h3 {
 
 
 
+/* Expectations section */
+
+.expectations-section {
+  max-width: 1200px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 128px;
+
+}
+
+.expectations-title-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+.expectations-title {
+  color: rgb(255, 255, 255);
+}
+
+.expectations-alt {
+  color: #616161;
+  font-weight: 500;
+}
+
+#expectations-image-container {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.expectations-image-itself {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+#expectations-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.expectations-first-point,
+.expectations-second-point,
+.expectations-third-point {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 380px;
+  margin-top: 64px;
+  border-radius: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.30);
+  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(9px);
+}
+
+.expectations-first-point {
+  margin-right: 32px;
+}
+
+.expectations-second-point {
+  margin-right: 32px;
+  margin-left: 32px;
+}
+
+.expectations-third-point {
+  margin-left: 32px;
+}
+
+.expectations-points-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expectations-point-title {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 40px;
+  color: #9AC63E;
+}
+
+.expectations-point-alt {
+  text-align: center;
+  color: white;
+  margin-bottom: 32px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.expectations-blob-left {
+  width: 800px;
+  height: 165px;
+  transform: rotate(90deg);
+  border-radius: 800px;
+  background: rgba(15, 244, 134, 0.67);
+  filter: blur(230px);
+  position: absolute;
+  z-index: -9;
+  left: -600px;
+  align-self: center;
+}
+
+.expectations-blob-right {
+  width: 800px;
+  height: 165px;
+  transform: rotate(90deg);
+  border-radius: 800px;
+  background: rgba(15, 244, 134, 0.67);
+  filter: blur(230px);
+  position: absolute;
+  z-index: -9;
+  right: -600px;
+  align-self: center;
+}
 
 
 
@@ -636,6 +773,166 @@ h3 {
 
 
 
+
+
+
+/* Offer seciton */
+
+.offer-section-container {
+  height: fit-content;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 64px;
+  margin-top: 128px;
+  margin-bottom: 128px;
+  margin: 128px 64px;
+  align-items: center;
+}
+
+
+
+.offer-text-alt {
+  font-weight: 500;
+  color: #616161;
+  margin-bottom: 32px;
+}
+
+
+.offer-text-side-container {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.30);
+  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(9px);
+  height: fit-content;
+  flex: 1.6;
+  padding: 32px
+}
+
+.offer-image-side-container {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.30);
+  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(9px);
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  /* Add padding to create the gap */
+  box-sizing: border-box;
+  /* Ensure padding is included in the width and height */
+}
+
+.offer-image {
+  width: 100%;
+  height: auto;
+  max-width: calc(100% - 32px);
+  /* Adjust width to account for padding (16px * 2) */
+  max-height: calc(100% - 32px);
+  /* Adjust height to account for padding if needed */
+}
+
+.offer-price-container {
+  background: rgba(255, 255, 255, 0.30);
+  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(9px);
+  width: fit-content;
+  height: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 20px;
+  padding-top: 8px;
+  margin-bottom: 32px;
+}
+
+#price {
+  font-family: "League Spartan";
+  color: #09381F;
+  font-size: 60px;
+}
+
+.offer-button-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.offer-spots-container {
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  align-self: baseline;
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  transform: rotate(-15deg);
+  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(25px);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  padding-left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  left: -30px;
+  top: -5px;
+  z-index: 999;
+}
+
+
+.offer-spots-text {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.container-bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.growing-circle {
+  border: 1.7px solid red;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  position: absolute;
+  animation: grow 1.5s infinite;
+}
+
+.steady-circle {
+  background-color: red;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+
+
+
+
+@keyframes grow {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
 
 
 
@@ -743,6 +1040,42 @@ h3 {
     flex-direction: column;
   }
 
+  /* expectations section */
+
+  .expectations-points-section {
+    flex-direction: column;
+  }
+
+  .expectations-first-point,
+  .expectations-second-point,
+  .expectations-third-point {
+    margin: 0px;
+  }
+
+  .expectations-first-point {
+    margin-top: 64px;
+  }
+
+  .expectations-first-point,
+  .expectations-second-point {
+    margin-bottom: 64px;
+  }
+
+  .expectations-title-section {}
+
+  .expectations-button {
+    margin-bottom: 64px;
+  }
+
+
+
+  /* Offer */
+
+  .offer-section-container {
+    flex-direction: column;
+  }
+
+
 
 }
 
@@ -825,8 +1158,6 @@ h3 {
     margin-left: 32px;
     margin-right: 32px;
   }
-
-
 
   #not-only-one-image-container {
     width: 100px;
@@ -919,6 +1250,62 @@ h3 {
   }
 
 
+  /* Expectations section */
 
+  .expectations-section {
+    margin-bottom: 64px;
+  }
+
+  .expectations-first-point,
+  .expectations-second-point,
+  .expectations-third-point {
+    width: fit-content;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .expectations-button {
+    width: fit-content;
+    height: 45px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .expectations-button-text {
+    font-size: 28px;
+  }
+
+
+
+
+  /* Offer */
+
+  .offer-section-container {
+    margin: 64px 32px;
+  }
+
+  .offer-text-title,
+  .offer-text-alt {
+    text-align: center;
+  }
+
+  .offer-price-container-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .offer-button-container {
+    flex-direction: column;
+  }
+
+  .offer-text-side-container {
+    padding: 16px
+  }
+
+  .offer-spots-container {
+    left: -20px;
+  }
 
 }
