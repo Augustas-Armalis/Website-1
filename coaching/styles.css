@@ -1041,6 +1041,20 @@ h3 {
 
 
 
+footer {
+  background-color: #F1EFE7;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  padding-left: 16px;
+}
+
+.footer-text {
+  font-size: 16px;
+}
+
+
 
 
 
@@ -1434,5 +1448,15 @@ h3 {
   }
 
 
+
+
+  footer {
+    background-color: #F1EFE7;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    justify-content: center;
+  }
 
 }
