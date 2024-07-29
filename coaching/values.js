@@ -25,3 +25,16 @@ document.getElementById('offerButton').addEventListener('click', function () {
 });
 document.getElementById('callLink').href = callLink;
 document.getElementById('spotsCount').innerText = spotsCount;
+
+
+// FAQ section dropdown
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const faq = button.nextElementSibling;
+    const icon = button.children[1];
+
+    faq.classList.toggle('show');
+    icon.classList.toggle('rotate');
+  })
+})

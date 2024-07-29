@@ -726,12 +726,12 @@ h3 {
   margin-bottom: 16px;
   text-align: center;
   font-size: 40px;
-  color: #9AC63E;
+  color: #ffffff;
 }
 
 .expectations-point-alt {
   text-align: center;
-  color: white;
+  color: #bcbcbc;
   margin-bottom: 32px;
   padding-right: 16px;
   padding-left: 16px;
@@ -940,13 +940,101 @@ h3 {
 
 
 
+/* FAQ */
 
 
+.questions-container {
+  max-width: 1200px;
+  margin: 128px 64px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-title {
+  color: white;
+  margin-bottom: 64px;
+}
+
+.question {
+  margin-bottom: 32px;
+}
+
+.question button {
+  width: 100%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.30);
+  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(9px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.question p {
+  font-size: 24px;
+  max-height: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-weight: 700;
+}
+
+.d-arrow {
+  transition: transform 0.3s ease;
+  color: #E2FFA5;
+  transform: rotate(-90deg);
+}
 
 
+.question p.show {
+  max-height: 200px;
+  background-color: #F1EFE7;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 36px;
+  color: #616161;
+  font-family: Quicksand;
+  font-size: 24px;
+  font-weight: 700;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 
+.question button .d-arrow.rotate {
+  transform: rotate(-0deg);
+}
 
+.faq-blob {
+  width: 1000px;
+  height: 100px;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  border-radius: 1000px;
+  background: #0FF486;
+  filter: blur(200px);
+  position: absolute;
+  align-self: center;
+  z-index: -9;
+}
 
+.question-name {
+  margin-left: 16px;
+}
 
 
 
@@ -1307,5 +1395,44 @@ h3 {
   .offer-spots-container {
     left: -20px;
   }
+
+
+
+
+
+  /* FAQ */
+  .questions-container {
+    margin: 64px 32px;
+  }
+
+  .faq-title {
+    margin-bottom: 32px;
+  }
+
+  .question-name {
+    font-size: 20px;
+    margin-left: 0px;
+  }
+
+  .question button {
+    padding: 6px 6px;
+  }
+
+  .question p.show {
+    font-size: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .question p {
+    font-size: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+  }
+
+
 
 }
