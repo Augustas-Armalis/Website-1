@@ -48,12 +48,12 @@ h1 {
 
 h2 {
   font-size: 36px;
-  line-height: 120%;
+  line-height: 125%;
 }
 
 h3 {
   font-size: 28px;
-  line-height: 115%;
+  line-height: 130%;
 }
 
 
@@ -65,11 +65,12 @@ h3 {
 
   h2 {
     font-size: 30px;
-    line-height: 120%;
+    line-height: 125%;
   }
 
   h3 {
     font-size: 24px;
+    line-height: 130%;
   }
 }
 
@@ -82,11 +83,12 @@ h3 {
 
   h2 {
     font-size: 28px;
-    line-height: 120%;
+    line-height: 125%;
   }
 
   h3 {
     font-size: 20px;
+    line-height: 130%;
   }
 }
 
@@ -373,6 +375,136 @@ h3 {
 
 
 
+
+
+
+
+
+
+
+/* Coach section */
+
+.coach-section {
+  width: 100%;
+  max-width: 1200px;
+  height: fit-content;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.30);
+  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(9px);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 64px;
+  gap: 64px;
+  margin-top: 128px;
+  margin-bottom: 128px;
+  margin-right: 64px;
+  margin-left: 64px;
+}
+
+.coach-image {
+  width: 100%;
+  height: auto;
+}
+
+.coach-image-container {
+  height: auto;
+  width: auto;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-text-container {
+  flex: 1;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+}
+
+.coach-section-button {
+  width: fit-content;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 52px;
+  background: #E2FFA5;
+  border: none;
+  padding-top: 5px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.coach-section-button:hover {
+  background: #b1cf72;
+  cursor: pointer;
+}
+
+.coach-section-CTA {
+  color: #000;
+  font-family: "League Spartan";
+  font-size: 32px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.coach-section-text-title {
+  color: white;
+}
+
+.coach-section-text-alt {
+  font-weight: 500;
+  color: #9AC63E;
+  margin-bottom: 32px;
+}
+
+.coach-section-text-main {
+  color: white;
+  margin-bottom: 32px;
+}
+
+.coach-section-blur-top {
+  width: 1200px;
+  height: 165px;
+  flex-shrink: 0;
+  border-radius: 1200px;
+  background: #0FF486;
+  filter: blur(225px);
+  position: absolute;
+  top: -165px;
+  left: -100px;
+}
+
+.coach-section-blur-bottom {
+  width: 1200px;
+  height: 165px;
+  flex-shrink: 0;
+  border-radius: 1200px;
+  background: #0FF486;
+  filter: blur(225px);
+  position: absolute;
+  bottom: -165px;
+  right: -100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1200px) {
 
   .logo {
@@ -423,6 +555,19 @@ h3 {
   .not-only-one-button {
     margin-bottom: 64px;
   }
+
+
+
+  /* Coach section */
+
+  .coach-section {
+    flex-direction: column;
+  }
+
+
+
+
+
 
 }
 
@@ -523,5 +668,32 @@ h3 {
   .not-only-one-button-text {
     font-size: 28px;
   }
+
+
+
+
+
+
+
+
+  /* Coach section */
+
+  .coach-section {
+    margin: 64px 32px;
+    padding: 16px;
+    gap: 32px;
+  }
+
+  .coach-section-CTA {
+    font-size: 28px;
+  }
+
+  .coach-section-button-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
 
 }
