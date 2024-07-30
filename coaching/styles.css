@@ -1220,6 +1220,8 @@ footer {
 
 
 
+
+
   /* You're not the only one section */
 
   .not-only-one-points-section {
@@ -1343,6 +1345,12 @@ footer {
     margin-top: 20%;
     margin-left: 10%;
   }
+
+
+  .video-wrapper iframe {
+    height: 37%;
+  }
+
 
 
 
