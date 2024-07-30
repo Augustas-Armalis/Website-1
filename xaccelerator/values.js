@@ -1,7 +1,11 @@
-let price = 'XXX';
-let offerLink = "https://www.sproutmarketing.xyz/xaccelerator/checkout";
-let callLink = "https://www.augustas.co";
-let spotsCount = 'X';
+let price = 'XX';
+let offerLink = "https://sproutmarketing.xyz/xaccelerator/checkout";
+let dynamicText = '+1 Sprout NFT for FREE';
+
+
+
+
+
 
 
 
@@ -56,11 +60,10 @@ let spotsCount = 'X';
 
 // Don't touch these, only those ↑↑↑
 document.getElementById('price').innerText = price;
+document.getElementById('dynamicText').innerText = dynamicText;
 document.getElementById('offerButton').addEventListener('click', function () {
   window.location.href = offerLink;
 });
-document.getElementById('callLink').href = callLink;
-document.getElementById('spotsCount').innerText = spotsCount;
 
 
 
