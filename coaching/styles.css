@@ -254,6 +254,7 @@ h3 {
   background: #E2FFA5;
   border: none;
   padding-top: 5px;
+  transition: background 0.15s ease;
 }
 
 .hero-section-button:hover {
@@ -375,6 +376,7 @@ h3 {
   margin-top: 64px;
   margin-bottom: 128px;
   cursor: pointer;
+  transition: background 0.15s ease;
 }
 
 .not-only-one-button:hover {
@@ -459,6 +461,7 @@ h3 {
   padding-top: 5px;
   padding-left: 32px;
   padding-right: 32px;
+  transition: background 0.15s ease;
 }
 
 .coach-section-button:hover {
@@ -584,6 +587,7 @@ h3 {
   cursor: pointer;
   padding-left: 32px;
   padding-right: 32px;
+  transition: background 0.15s ease;
 }
 
 .thirty-button:hover {
@@ -635,8 +639,12 @@ h3 {
   height: auto;
   border-radius: 20px;
   background: #E6E6E6;
-  box-shadow: 0px 0px 200px 0px rgba(15, 244, 134, 0.50);
   cursor: pointer;
+  transition: box-shadow 0.15s ease;
+}
+
+.video:hover {
+  box-shadow: 0px 0px 200px 0px rgba(15, 244, 134, 0.50);
 }
 
 .film-image {
@@ -702,7 +710,7 @@ h3 {
   cursor: pointer;
   color: white;
   font-size: 70px;
-  font-weight: 900;
+  font-weight: 500;
   z-index: 2;
   /* Ensure it appears above the content */
 }
@@ -1006,6 +1014,15 @@ h3 {
   position: absolute;
 }
 
+#callLink {
+  color: black;
+  transition: color 0.15s ease;
+}
+
+#callLink:hover {
+  color: #616161;
+}
+
 
 
 
@@ -1069,6 +1086,12 @@ h3 {
   color: #fff;
   font-weight: 700;
   cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+
+.question button:hover {
+  background: rgba(138, 138, 138, 0.3);
 }
 
 .question p {
