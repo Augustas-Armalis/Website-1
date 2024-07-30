@@ -18,6 +18,47 @@ let spotsCount = 'X';
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Don't touch these, only those ↑↑↑
 document.getElementById('price').innerText = price;
 document.getElementById('offerButton').addEventListener('click', function () {

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Accelerators</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon sprout.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+
+  <style>
+    /* League Spartan font from google */
+    @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Quicksand:wght@300..700&display=swap');
+    /* Quicksand font from google */
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+  </style>
+</head>
+
+<body>
+
+  <div class="cards-container">
+
+    <div class="first-card-container">
+      <button class="first-button" onclick="window.location.href='#'">
+        <div class="button-container-helio">
+          <div id="helioCheckoutContainer"></div>
+        </div>
+      </button>
+
+      <button class="second-button" onclick="window.location.href='#'"> <!--  STRIPE LINK -->
+        <div class="button-container-helio">
+          <div id="helioCheckoutContainer">
+            <a class="button-text">PAY WITH STRIPE</a>
+          </div>
+        </div>
+      </button>
+    </div>
+
+
+  </div>
+
+
+  <script type="module" crossorigin src="https://embed.hel.io/assets/index-v1.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      window.helioCheckout(
+        document.getElementById("helioCheckoutContainer"),
+        {
+          paylinkId: "66a0670e6b8d7a9d6116bb25",
+          theme: { "colors": { "primaryButtonBackground": "#92b93c", "primaryButtonText": "#F1EFE7" } },
+          display: "button",
+          onSuccess: event => console.log(event),
+          onError: event => console.log(event),
+          onPending: event => console.log(event),
+          onCancel: () => console.log("Cancelled payment"),
+          onStartPayment: () => console.log("Starting payment"),
+        }
+      );
+    });
+  </script>
+
+  <style>
+    .button-container-helio {
+      width: 100%;
+      border-radius: 999px;
+      overflow: hidden;
+      /* height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center; */
+    }
+  </style>
+
+
+
+</body>
+
+</html>

@@ -1,7 +1,43 @@
 let price = 'XXX';
-let offerLink = "https://www.augustas.co";
+let offerLink = "https://www.sproutmarketing.xyz/xaccelerator/checkout";
 let callLink = "https://www.augustas.co";
 let spotsCount = 'X';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
