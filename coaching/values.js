@@ -27,6 +27,36 @@ document.getElementById('callLink').href = callLink;
 document.getElementById('spotsCount').innerText = spotsCount;
 
 
+
+
+
+
+function openModal() {
+  document.getElementById("videoModal").style.display = "flex";
+  document.getElementById("youtubeVideo").src = "https://www.youtube.com/embed/oTVoNF264K0?si=3DGS-X2aPqhu-OHW";
+  document.body.style.overflowX = "hidden"; // Disable horizontal scroll
+  document.body.style.overflowY = "hidden"; // Disable vertical scroll
+  document.documentElement.style.overflowX = "hidden"; // Disable horizontal scroll
+  document.documentElement.style.overflowY = "hidden"; // Disable vertical scroll
+}
+
+function closeModal() {
+  document.getElementById("videoModal").style.display = "none";
+  document.getElementById("youtubeVideo").src = "";
+  document.body.style.overflowX = "hidden"; // Ensure horizontal scroll remains disabled
+  document.body.style.overflowY = "visible";  // Re-enable vertical scroll
+  document.documentElement.style.overflowX = "hidden"; // Ensure horizontal scroll remains disabled
+  document.documentElement.style.overflowY = "visible";  // Re-enable vertical scroll
+}
+
+
+
+
+
+
+
+
+
 // FAQ section dropdown
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
@@ -171,3 +201,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+
+

@@ -647,6 +647,89 @@ h3 {
 
 
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal-content {
+  position: fixed;
+  width: 80vw;
+  /* Adjust width based on screen size */
+  max-width: 80%;
+  /* Ensure it doesn't exceed the viewport width */
+  padding-bottom: 45%;
+  /* 16:9 aspect ratio padding trick */
+  overflow: hidden;
+  border: none;
+  box-sizing: border-box;
+}
+
+.video-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  margin-left: 10%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  color: white;
+  font-size: 70px;
+  font-weight: 900;
+  z-index: 2;
+  /* Ensure it appears above the content */
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Expectations section */
@@ -1193,6 +1276,23 @@ footer {
   }
 
 
+  .video-wrapper {
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+
+  .close {
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+    z-index: 2;
+    /* Ensure it appears above the content */
+  }
+
 
 }
 
@@ -1216,7 +1316,10 @@ footer {
   }
 
 
-
+  .video-wrapper {
+    margin-top: 20%;
+    margin-left: 10%;
+  }
 
 
 

@@ -202,21 +202,38 @@
 
 
 
-    <!-- Video section -->
 
+    <!-- Video section -->
     <div id="section" style="overflow: visible;">
         <div class="video-section">
-
             <div class="video-section-title-container">
                 <h1 id="spartan" class="video-sectio-title">Our methods are proven to work.</h1>
                 <h3 id="spartan" class="video-sectio-alt">He made $500 in his first 5 days of coaching</h3>
             </div>
-
-            <div class="video">
+            <div class="video" onclick="openModal()">
                 <img src="images/film.png" class="film-image">
             </div>
         </div>
     </div>
+
+    <!-- The Modal -->
+    <div id="videoModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="video-wrapper">
+                <iframe id="youtubeVideo" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
 
 
 
