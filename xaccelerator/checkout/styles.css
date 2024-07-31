@@ -21,6 +21,14 @@ img {
   padding: 0;
 }
 
+#spartan {
+  font-family: "League Spartan";
+}
+
+#quicksand {
+  font-family: "Quicksand";
+}
+
 input,
 textarea,
 button,
@@ -57,11 +65,14 @@ body {
   height: 100vw;
   justify-content: center;
   align-items: center;
+
 }
+
+
 
 .first-card-container {
   border-radius: 20px;
-  background: #09381F;
+  background: #29d278;
   box-shadow: 35px 26px 40px 0px rgba(0, 0, 0, 0.60);
   width: fit-content;
   height: fit-content;
@@ -71,6 +82,14 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 32px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.30);
+  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.15s ease;
+}
+
+.first-card-container:hover {
+  box-shadow: 0px 0px 70px 0px rgba(15, 244, 134, 0.50);
 }
 
 .image-container-first {
@@ -100,7 +119,7 @@ body {
   height: fit-content;
   width: fit-content;
   height: 45px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   margin-right: 16px;
   margin-left: 16px;
   cursor: pointer;
@@ -127,6 +146,46 @@ body {
 }
 
 
+.hero-section-blur-top {
+  width: 1200px;
+  height: 165px;
+  flex-shrink: 0;
+  border-radius: 1200px;
+  background: #0FF486;
+  filter: blur(225px);
+  position: absolute;
+  top: -165px;
+  right: -100px;
+  align-self: flex-start;
+}
+
+.hero-section-blur-bottom {
+  width: 1200px;
+  height: 165px;
+  flex-shrink: 0;
+  border-radius: 1200px;
+  background: #0FF486;
+  filter: blur(225px);
+  position: absolute;
+  bottom: -165px;
+  left: -100px;
+  align-self: flex-end;
+}
+
+.little-text {
+  color: white;
+  margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -135,5 +194,17 @@ body {
     flex-direction: column;
     gap: 32px;
     width: 100vh;
+  }
+
+  .hero-section-blur-top,
+  .hero-section-blur-bottom {
+    width: 1000;
+    height: 140px;
+    flex-shrink: 0;
+    border-radius: 1200px;
+    background: #0FF486;
+    filter: blur(60px);
+    position: absolute;
+    align-self: center;
   }
 }

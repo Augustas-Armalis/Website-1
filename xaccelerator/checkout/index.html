@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Accelerators</title>
+  <title>Checkout</title>
   <link rel="icon" type="image/x-icon" href="images/favicon sprout.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
@@ -22,15 +22,19 @@
 
 <body>
 
+  <div class="hero-section-blur-top" style="z-index: -10;"></div>
+  <div class="hero-section-blur-bottom" style="z-index: -10;"></div>
+
   <div class="cards-container">
 
     <div class="first-card-container">
+      <p id="quicksand" class="little-text">Crypto</p>
       <button class="first-button" onclick="window.location.href='#'">
         <div class="button-container-helio">
           <div id="helioCheckoutContainer"></div>
         </div>
       </button>
-
+      <p id="quicksand" class="little-text">Fiat</p>
       <button class="second-button" onclick="window.location.href='#'"> <!--  STRIPE LINK -->
         <div class="button-container-helio">
           <div id="helioCheckoutContainer">
