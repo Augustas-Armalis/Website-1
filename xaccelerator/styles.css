@@ -888,6 +888,36 @@ h3 {
 
 /* Offer seciton */
 
+.countdown-container {
+  text-align: center;
+}
+
+#countdown {
+  font-size: 24px;
+  color: #333;
+  font-family: "Quicksand";
+}
+
+#clock {
+  display: flex;
+  padding-top: 0px;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+#nameHundred {
+  height: 50px;
+  width: auto;
+}
+
+.offer-price-container-container {
+  flex-direction: row;
+  display: flex;
+  gap: 16px;
+}
+
 .offer-section-container {
   height: fit-content;
   max-width: 1200px;
@@ -900,7 +930,12 @@ h3 {
   align-items: center;
 }
 
-
+#clock {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
 
 .offer-text-alt {
   font-weight: 500;
@@ -955,12 +990,15 @@ h3 {
   border-radius: 20px;
   padding-top: 8px;
   margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #price {
   font-family: "League Spartan";
   color: #09381F;
-  font-size: 60px;
+  font-size: 70px;
 }
 
 .offer-button-container {
@@ -1559,9 +1597,30 @@ footer {
     margin: 64px 32px;
   }
 
+  #nameHundred {
+    height: 40px;
+  }
+
+  #clock {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  #price {
+    font-size: 57px;
+  }
+
   .offer-text-title,
   .offer-text-alt {
     text-align: center;
+  }
+
+  .offer-price-container {
+    padding-right: 20px;
+    padding-left: 20px;
+    z-index: 90;
   }
 
   .offer-price-container-container {
@@ -1569,6 +1628,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px
   }
 
   .offer-button-container {
