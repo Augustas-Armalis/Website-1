@@ -1,6 +1,6 @@
 let price = 'XX';
 let offerLink = "https://sproutmarketing.xyz/xaccelerator/checkout";
-let dynamicText = '+1 Sprout NFT for FREE';
+let dynamicText = '+1 Sprout NFT';
 
 
 
