@@ -24,10 +24,7 @@
 
 <body>
 
-  <div id="section">
-
-
-
+  <div id="section" style="padding-bottom: 32px;">
     <div class="hero-section">
 
       <div class="hero-section-left-side">
@@ -60,7 +57,52 @@
 
   </div>
 
+  <div class="logos">
+    <div class="logos-slide">
+      <a href="https://example.com/link1" target="_blank" class="slide-link">
+        <img src="images/Logo 1.png" class="slide-img" />
+      </a>
+      <a href="https://example.com/link2" target="_blank" class="slide-link">
+        <img src="images/Logo 2.png" class="slide-img" />
+      </a>
+      <a href="https://www.tastycrypto.com/" target="_blank" class="slide-link">
+        <img src="images/Logo 3.png" class="slide-img" />
+      </a>
+      <a href="https://example.com/link4" target="_blank" class="slide-link">
+        <img src="images/Logo 4.png" class="slide-img" />
+      </a>
+      <a href="https://example.com/link1" target="_blank" class="slide-link">
+        <img src="images/Logo 1.png" class="slide-img" />
+      </a>
+      <a href="https://example.com/link2" target="_blank" class="slide-link">
+        <img src="images/Logo 2.png" class="slide-img" />
+      </a>
+      <a href="https://example.com/link3" target="_blank" class="slide-link">
+        <img src="images/Logo 3.png" class="slide-img" />
+      </a>
+      <a href="https://example.com/link4" target="_blank" class="slide-link">
+        <img src="images/Logo 4.png" class="slide-img" />
+      </a>
+    </div>
+  </div>
+
+  <script>
+    var copy = document.querySelector(".logos-slide").cloneNode(true);
+    document.querySelector(".logos").appendChild(copy);
+  </script>
+
   <div class="spacer" style="height: 300vh;"></div>
+
+
+
+
+
+
+
+
+
+
+
 
   <script src="script.js"></script>
 

@@ -121,7 +121,7 @@ h3 {
   max-width: 1400px;
   width: 100%;
   margin: 64px;
-  margin-top: 96px;
+  margin-top: 64px;
   margin-left: 256px;
   margin-bottom: 0px;
   overflow: visible;
@@ -200,6 +200,7 @@ h3 {
 }
 
 .hero-section-button {
+  padding-top: 3px;
   width: fit-content;
   height: 45px;
   flex-shrink: 0;
@@ -210,11 +211,14 @@ h3 {
   align-items: center;
   transition: background 0.15s ease;
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s;
 }
 
 .hero-section-button:hover {
-  background: #5B8D6D;
+  background: #2f4737;
   cursor: pointer;
+  transform: scale(1.1);
+
 }
 
 .hero-section-CTA {
@@ -242,4 +246,100 @@ h3 {
   position: absolute;
   bottom: 0;
   /* Ensure the image itself is aligned to the bottom */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: slide 20s linear infinite;
+  animation-delay: 0s;
+}
+
+.logos {
+  overflow: hidden;
+  height: fit-content;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background: linear-gradient(180deg, #1A281F 50%, #5C8E6E 123.81%);
+  box-shadow: 0px 4px 40px 5px rgba(0, 0, 0, 0.30);
+  white-space: nowrap;
+  position: relative;
+  will-change: transform;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 124px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #1A281F);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #1A281F);
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 30s slide infinite linear;
+  will-change: transform;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.slide-link {
+  display: inline-block;
+  text-decoration: none;
+  height: fit-content;
+  width: fit-content;
+}
+
+.slide-img {
+  height: 50px;
+  margin: 0 32px;
+  width: auto;
+  opacity: 0.8;
+  transition: transform 0.3s, opacity 0.3s;
+  will-change: transform, opacity;
+  filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.5));
+}
+
+.slide-link:hover .slide-img {
+  transform: scale(1.1);
+  opacity: 1;
+  cursor: pointer;
 }
