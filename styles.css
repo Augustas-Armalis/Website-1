@@ -766,8 +766,9 @@ nav.visible {
 
   .hero-section {
     margin: 32px;
-    margin-top: 64px;
+    margin-top: 42px;
   }
+
 
   .hero-section-right-side {
     display: none;
@@ -789,6 +790,13 @@ nav.visible {
     font-size: 36px;
     line-height: 110%;
     letter-spacing: -0.5px;
+  }
+
+  .hero-section-left-side {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
 

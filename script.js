@@ -56,7 +56,11 @@ const mobileNav = document.querySelector('.mobile-nav');
 function handleScroll() {
   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (currentScroll > lastScrollTopMobile) {
+  if (currentScroll === 0) {
+    // At the top of the page
+    mobileNav.classList.remove('visible');
+    mobileNav.classList.add('hidden');
+  } else if (currentScroll > lastScrollTopMobile) {
     // Scrolling down
     mobileNav.classList.remove('visible');
     mobileNav.classList.add('hidden');
@@ -65,6 +69,7 @@ function handleScroll() {
     mobileNav.classList.remove('hidden');
     mobileNav.classList.add('visible');
   }
+
   lastScrollTopMobile = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
 }
 
@@ -84,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const mobileNav = document.querySelector('.mobile-nav');
   const mobileOpenedNav = document.querySelector('.mobile-opened-nav');
   const body = document.body;
-  const logoContainer = document.querySelector('.logo-nav'); // Add this line
   let scrollPosition = 0;
 
   function toggleNav() {
@@ -103,8 +107,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Event listener for the mobile X container
   mobileXContainer.addEventListener('click', toggleNav);
 
-  // Event listener for the logo container
-  logoContainer.addEventListener('click', toggleNav); // Add this line
 
   // Event listeners for each link in the mobile opened nav
   const navLinks = mobileOpenedNav.querySelectorAll('a');
