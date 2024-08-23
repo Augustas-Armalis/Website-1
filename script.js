@@ -83,9 +83,9 @@ function handleScroll() {
   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
   if (currentScroll === 0) {
-    // At the top of the page
-    mobileNav.classList.remove('visible');
-    mobileNav.classList.add('hidden');
+    // // At the top of the page
+    // mobileNav.classList.remove('visible');
+    // mobileNav.classList.add('hidden');
   } else if (currentScroll > lastScrollTopMobile) {
     // Scrolling down
     mobileNav.classList.remove('visible');
@@ -102,10 +102,10 @@ function handleScroll() {
 // Add scroll event listener
 window.addEventListener('scroll', handleScroll);
 
-// Initialize state on page load
-window.addEventListener('load', function () {
-  mobileNav.classList.add('hidden'); // Ensure it's hidden initially
-});
+// // Initialize state on page load
+// window.addEventListener('load', function () {
+//   mobileNav.classList.add('hidden'); // Ensure it's hidden initially
+// });
 
 
 
