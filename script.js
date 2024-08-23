@@ -1,3 +1,29 @@
+function updateHeading() {
+  const heading = document.getElementById('spartan');
+  if (window.innerWidth <= 850) {
+    heading.textContent = 'Building supercharged communities for Web3';
+  } else {
+    heading.textContent = 'Crypto’s premium marketing agency for social media & GTM strategies';
+  }
+}
+
+// Initial check
+updateHeading();
+
+// Add event listener for resizing
+window.addEventListener('resize', updateHeading);
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const logosSlide = document.querySelector('.logos-slide');
   if (logosSlide) {

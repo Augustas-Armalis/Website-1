@@ -1042,10 +1042,16 @@ nav.visible {
 
 @media (max-width: 850px) {
 
-
+  #section-hero {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
   .hero-section {
-    margin: 32px;
+    margin: 0px;
     margin-top: 42px;
   }
 
@@ -1073,10 +1079,12 @@ nav.visible {
   }
 
   .hero-section-left-side {
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    margin-right: 8px;
+    margin-left: 8px;
   }
 
 
