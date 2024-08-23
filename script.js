@@ -83,13 +83,17 @@ function handleScroll() {
   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
   if (currentScroll === 0) {
-    // // At the top of the page
-    // mobileNav.classList.remove('visible');
-    // mobileNav.classList.add('hidden');
+    // At the top of the page
+    mobileNav.style.background = 'none'; // Reset background
+    mobileNav.style.boxShadow = 'none'; // Remove box-shadow
+    mobileNav.style.backdropFilter = 'none'; // Remove backdrop-filter
   } else if (currentScroll > lastScrollTopMobile) {
     // Scrolling down
     mobileNav.classList.remove('visible');
     mobileNav.classList.add('hidden');
+    mobileNav.style.background = 'rgba(255, 255, 255, 0.30)';
+    mobileNav.style.boxShadow = '0px 8px 25px 0px rgba(0, 0, 0, 0.25)';
+    mobileNav.style.backdropFilter = 'blur(10px)';
   } else {
     // Scrolling up
     mobileNav.classList.remove('hidden');
@@ -102,10 +106,12 @@ function handleScroll() {
 // Add scroll event listener
 window.addEventListener('scroll', handleScroll);
 
-// // Initialize state on page load
-// window.addEventListener('load', function () {
-//   mobileNav.classList.add('hidden'); // Ensure it's hidden initially
-// });
+// Initialize state on page load
+window.addEventListener('load', function () {
+  mobileNav.style.background = 'none'; // Reset background
+  mobileNav.style.boxShadow = 'none'; // Remove box-shadow
+  mobileNav.style.backdropFilter = 'none'; // Remove backdrop-filter
+});
 
 
 
