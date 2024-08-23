@@ -186,3 +186,71 @@ gsap.fromTo(".grid-hero",
 
 
 
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const buttons = document.querySelectorAll('.framework-buttons > div'); // Select all buttons
+  const images = document.querySelectorAll('.frm-image-container > div'); // Select all images
+  const descriptions = document.querySelectorAll('.framework-desc-container > div'); // Select all descriptions
+
+  function handleButtonClick(e) {
+    // Remove active state from all buttons, images, and descriptions
+    buttons.forEach(btn => btn.classList.remove('active'));
+    images.forEach(img => img.classList.remove('active-img'));
+    descriptions.forEach(desc => desc.classList.remove('active-desc'));
+
+    // Add active state to the clicked button
+    const clickedButton = e.currentTarget;
+    clickedButton.classList.add('active');
+
+    // Show the corresponding image and description
+    const targetImgId = clickedButton.getAttribute('data-target');
+    document.querySelector(`.${targetImgId}`).classList.add('active-img');
+
+    // Determine which description to show based on button clicked
+    const targetDescClass = targetImgId.replace('frm-img', 'desc'); // e.g., frm-img1 => desc1
+    document.querySelector(`.${targetDescClass}`).classList.add('active-desc');
+  }
+
+  // Initialize by showing the first button, image, and description as active
+  buttons[0].classList.add('active');
+  images[0].classList.add('active-img');
+  descriptions[0].classList.add('active-desc');
+
+  // Attach event listeners to each button
+  buttons.forEach(button => {
+    button.addEventListener('click', handleButtonClick);
+  });
+});
+
+
+
+
+
+
+gsap.fromTo(".framework-title",
+  {
+    opacity: 0,
+    y: 100
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".framework-title", // Element that triggers the animation
+      start: "top bottom", // When the top of the element hits the bottom of the viewport
+      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
+      once: true           // Optional: animate only once
+    }
+  }
+);

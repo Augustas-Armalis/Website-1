@@ -240,7 +240,7 @@ nav.visible {
   justify-content: center;
   height: fit-content;
   position: relative;
-  overflow: hidden;
+
 }
 
 
@@ -511,7 +511,146 @@ nav.visible {
 
 
 .framework-title {
-  margin-top: 96px;
+  margin-top: 92px;
+}
+
+.framework-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frm-btn-image-container1,
+.frm-btn-image-container2,
+.frm-btn-image-container3,
+.frm-btn-image-container4,
+.frm-btn-image-container5,
+.frm-btn-image-container6 {
+  height: 70px;
+  width: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.15s ease-in-out;
+}
+
+
+
+
+.frm-btn-image-container1 {
+  background-image: url('images/Icons/Manage\ blank.png');
+}
+
+.frm-btn1:hover .frm-btn-image-container1 {
+  background-image: url('images/Icons/Manage\ hover.png');
+  scale: 1.05;
+}
+
+/* Button hover effects */
+.frm-btn1:hover .frm-btn-text h3,
+.frm-btn2:hover .frm-btn-text h3,
+.frm-btn3:hover .frm-btn-text h3,
+.frm-btn4:hover .frm-btn-text h3,
+.frm-btn5:hover .frm-btn-text h3,
+.frm-btn6:hover .frm-btn-text h3 {
+  color: rgba(88, 88, 88, 1);
+}
+
+
+
+
+.frm-btn-image-container2 {
+  background-image: url('images/Icons/Engage\ blank.png');
+}
+
+.frm-btn2:hover .frm-btn-image-container2 {
+  background-image: url('images/Icons/Engage\ hover.png');
+  scale: 1.05;
+}
+
+
+
+/* Button image containers */
+.frm-btn-image-container3 {
+  background-image: url('images/Icons/Create\ blank.png');
+}
+
+.frm-btn3:hover .frm-btn-image-container3 {
+  background-image: url('images/Icons/Create\ hover.png');
+  scale: 1.05;
+}
+
+.frm-btn-image-container4 {
+  background-image: url('images/Icons/Connect\ blank.png');
+}
+
+.frm-btn4:hover .frm-btn-image-container4 {
+  background-image: url('images/Icons/Connect\ hover.png');
+  scale: 1.05;
+}
+
+.frm-btn-image-container5 {
+  background-image: url('images/Icons/Analyze\ blank.png');
+}
+
+.frm-btn5:hover .frm-btn-image-container5 {
+  background-image: url('images/Icons/Analyze\ hover.png');
+  scale: 1.05;
+}
+
+.frm-btn-image-container6 {
+  background-image: url('images/Icons/Strat\ blank.png');
+}
+
+.frm-btn6:hover .frm-btn-image-container6 {
+  background-image: url('images/Icons/Strat\ hover.png');
+  scale: 1.05;
+}
+
+/* Active button states */
+.frm-btn3.active .frm-btn-image-container3 {
+  background-image: url('images/Icons/Create\ full.png');
+}
+
+.frm-btn4.active .frm-btn-image-container4 {
+  background-image: url('images/Icons/Conect\ full.png');
+}
+
+.frm-btn5.active .frm-btn-image-container5 {
+  background-image: url('images/Icons/Analyze\ full.png');
+}
+
+.frm-btn6.active .frm-btn-image-container6 {
+  background-image: url('images/Icons/Strat\ full.png');
+}
+
+/* Additional CSS rules for new descriptions and images */
+.desc3,
+.desc4,
+.desc5,
+.desc6 {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.active-desc {
+  display: block;
+  opacity: 1;
+}
+
+.frm-img3,
+.frm-img4,
+.frm-img5,
+.frm-img6 {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.active-img {
+  display: block;
+  opacity: 1;
 }
 
 
@@ -519,30 +658,109 @@ nav.visible {
 
 
 
+.frm-btn1,
+.frm-btn2,
+.frm-btn3,
+.frm-btn4,
+.frm-btn5,
+.frm-btn6 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.frm-btn-text h3 {
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  transition: all 0.15s ease-in-out;
+}
+
+.framework-buttons {
+  display: flex;
+  gap: 32px;
+  margin-top: 42px
+}
 
 
 
 
 
+.framework-desc-container {
+  margin-top: 36px;
+}
+
+#desc-text h2 {
+  font-size: 24px;
+}
 
 
 
 
 
+.frm-image-container {
+  width: 900px;
+  height: fit-content;
+  margin: 0 auto;
+  box-shadow: 0px 20px 90px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin-top: 64px;
+}
+
+#frm-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Hide the inactive images initially */
+.frm-img1,
+.frm-img2 {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Show the active image */
+.active-img {
+  display: block;
+  opacity: 1;
+}
+
+/* Hide the inactive descriptions initially */
+.desc1,
+.desc2 {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Show the active description */
+.active-desc {
+  display: block;
+  opacity: 1;
+}
 
 
+/* Button states */
+.frm-btn1.active .frm-btn-image-container1 {
+  background-image: url('images/Icons/Manage\ full.png');
+}
 
+.frm-btn2.active .frm-btn-image-container2 {
+  background-image: url('images/Icons/Engage\ full.png');
+}
 
-
-
-
-
-
-
-
-
-
-
+.frm-btn1.active .frm-btn-text h3,
+.frm-btn2.active .frm-btn-text h3,
+.frm-btn3.active .frm-btn-text h3,
+.frm-btn4.active .frm-btn-text h3,
+.frm-btn5.active .frm-btn-text h3,
+.frm-btn6.active .frm-btn-text h3 {
+  color: rgb(0, 0, 0);
+}
 
 
 
