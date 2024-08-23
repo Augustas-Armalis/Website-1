@@ -240,7 +240,6 @@ nav.visible {
   justify-content: center;
   height: fit-content;
   position: relative;
-
 }
 
 
@@ -1000,6 +999,16 @@ nav.visible {
     text-decoration: none;
     margin-left: 32px;
     margin-right: 32px;
+  }
+
+
+
+
+
+
+
+  #section-frm {
+    display: none;
   }
 }
 
