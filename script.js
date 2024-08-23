@@ -120,3 +120,69 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+
+
+
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".hero-section-right-side",
+  {
+    x: '100%',
+    opacity: 0
+  },
+  {
+    x: '0%',
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+    delay: 0.1, // Add a 0.5 second delay before the animation starts
+    scrollTrigger: {
+      trigger: ".hero-section-right-side",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    }
+  }
+);
+
+
+
+// Fade in the element when it enters the viewport
+gsap.fromTo(".hero-section-left-side",
+  {
+    opacity: 0  // Start fully transparent
+  },
+  {
+    opacity: 1, // Fade to fully visible
+    duration: 1, // Duration of 1 second
+    ease: "power2.out",
+    delay: 0.3,
+    scrollTrigger: {
+      trigger: ".hero-section-left-side",
+      start: "top 80%", // Start the animation when the top of the element hits 80% of the viewport
+      toggleActions: "play none none none"
+    }
+  }
+);
+
+
+// Animate the element to fade in and move from bottom to top on page load
+gsap.fromTo(".grid-hero",
+  {
+    opacity: 0,    // Start fully transparent
+    y: 100         // Start 100 pixels below the original position
+  },
+  {
+    opacity: 1,
+    delay: 0.2,    // Fade to fully visible
+    y: 0,          // Move to the original position
+    duration: 1.5, // Duration of 1.5 seconds
+    ease: "power2.out" // Smooth easing effect
+  }
+);
+
+
+

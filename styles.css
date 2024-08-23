@@ -151,6 +151,8 @@ nav.visible {
 }
 
 
+
+
 .logo-img-nav {
   height: 40px;
   width: auto;
@@ -233,7 +235,13 @@ nav.visible {
 
 
 
-
+#section-frm {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
 
 
 
@@ -477,12 +485,13 @@ nav.visible {
 
 .slide-img {
   height: 50px;
-  margin: 0 36px;
+  margin: 0 30px;
   width: auto;
   opacity: 0.8;
   transition: transform 0.3s, opacity 0.3s;
   will-change: transform, opacity;
   filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.5));
+
 }
 
 .slide-link:hover .slide-img {
@@ -490,6 +499,44 @@ nav.visible {
   opacity: 1;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+.framework-title {
+  margin-top: 96px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -666,7 +713,10 @@ nav.visible {
     height: 100%;
     width: 100vw;
     position: fixed;
-    background-color: rgba(26, 40, 31, 1);
+    background: rgba(0, 0, 0, 0.6);
+
+
+    backdrop-filter: blur(9px);
     z-index: 99;
     display: flex;
     align-items: center;
@@ -686,6 +736,7 @@ nav.visible {
   .mobile-opened-nav a {
     text-decoration: none;
     font-size: 32px;
+    font-weight: 700;
     font-family: "Quicksand";
     color: white;
     transition: transform 0.3s;
@@ -703,7 +754,10 @@ nav.visible {
     height: 50px;
     flex-shrink: 0;
     border-radius: 52px;
-    background: rgba(226, 255, 165, 1);
+    background: rgb(255, 255, 255);
+
+    /* bt */
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
     border: none;
     display: flex;
     align-items: center;
