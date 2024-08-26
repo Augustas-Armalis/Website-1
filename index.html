@@ -8,8 +8,9 @@
   <title>Sprout</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
 
 
   <style>
@@ -54,9 +55,9 @@
 
     <div class="nav-opt-container">
       <a href="#">Home</a>
-      <a href="#">Framework</a>
-      <a href="#">About us</a>
-      <a href="#">Track record</a>
+      <a href="#section-frm">Framework</a>
+      <a href="#section-cmm">About us</a>
+      <a href="#section-tes">Track record</a>
     </div>
 
     <button class="nav-button" onclick="window.location.href='#offer'">
@@ -81,9 +82,9 @@
   <div class="mobile-opened-nav">
     <div class="button-container-mobile-nav">
       <a href="#">Home</a>
-      <a href="#">Framework</a>
-      <a href="#">About us</a>
-      <a href="#">Track record</a>
+      <a href="#phone-framework">Framework</a>
+      <a href="#section-cmm">About us</a>
+      <a href="#tes-mobile">Track record</a>
     </div>
     <button class="nav-button-next" onclick="window.location.href='#offer'">
       <a class="nav-btn-text-next" style="color: rgb(0, 0, 0);">Services</a>
@@ -318,7 +319,7 @@
 
 
 
-  <div class="slider">
+  <div class="slider" id="phone-framework">
 
     <div class="phone-slider-header-title">
       <h1 id="spartan" class="hero-section-title">Our framework</h1>
@@ -437,29 +438,144 @@
 
 
   <div id="section-cmm">
+    <div class="cmm-bakcground-full">
 
-    <div class="background-cmm">
+      <div class="background-cmm">
 
-      <div class="left-side-cmm">
-        <h1 id="spartan" class="cmm-title">We put your community<br> over everything</h1>
-        <h3 id="quicksand" class="cmm-alt">Through strategic content and deep<br> engagement, we build a brand
-          that<br>your
-          audience falls in
-          love with.</h3>
-        <button class="nav-button-cmm" onclick="window.location.href='#offer'">
-          <a class="nav-btn-text-cmm">Get started</a>
-        </button>
+        <div class="left-side-cmm">
+          <h1 id="spartan" class="cmm-title">We put your community<br> over everything</h1>
+          <h3 id="quicksand" class="cmm-alt">Through strategic content and deep<br> engagement, we build a brand
+            that<br>your
+            audience falls in
+            love with.</h3>
+          <button class="nav-button-cmm" onclick="window.location.href='#offer'">
+            <a class="nav-btn-text-cmm">Get started</a>
+          </button>
+        </div>
+
+
+        <div class="rigth-side-cmm">
+          <img src="images/cmm-img.png" class="cmm-image">
+        </div>
+
       </div>
-
-
-      <div class="rigth-side-cmm">
-        <img src="images/cmm-img.png" class="cmm-image">
-      </div>
-
     </div>
 
   </div>
 
+  <div id="section-tes">
+    <div class="tes-container">
+      <div class="tes-title">
+        <h1 id="spartan">What our clients say</h1>
+      </div>
+
+      <div class="testies">
+
+        <div class="first-tes" id="tes-fill">
+          <img src="images/pfp.png" class="tes-pfp">
+          <h3 class="tes-text" id="quicksand">Sprout Marketing has been an absolute pleasure to work with. They are very
+            responsive to
+            our needs and have
+            a great understanding of the nuances of Web3 marketing with content creation and getting social engagement.
+          </h3>
+          <p class="tes-name" id="spartan">Jeff</p>
+          <p class="tes-eta" id="spartan">Founder @ Steadefi</p>
+
+        </div>
+
+
+        <div class="first-tes" id="tes-fill">
+          <img src="images/pfp 2.png" class="tes-pfp">
+          <h3 class="tes-text" id="quicksand">Working with Sprout Marketing has been a game-changer for our brand! Their
+            seamless communication, strategic adaptability, and high-quality content drove a 200% boost in our X
+            audience and engagement, plus a 500% surge in impressions within just the first month. Their results speak
+            for themselves—truly outstanding!
+          </h3>
+          <p class="tes-name" id="spartan">Pryia</p>
+          <p class="tes-eta" id="spartan">Operations @ tastycrypto</p>
+
+        </div>
+
+        <div class="first-tes" id="tes-fill">
+          <img src="images/pfp 3.png" class="tes-pfp">
+          <h3 class="tes-text" id="quicksand">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto atque
+            officiis enim aliquam et id necessitatibus. Alias deleniti iure tenetur itaque, qui eaque molestias ut
+            delectus quam quidem quisquam deserunt atque sapiente, nisi tempora inventore nemo fugiat, iste ducimus
+            odit.
+            iusto dicta.
+          </h3>
+          <p class="tes-name" id="spartan">Lorem</p>
+          <p class="tes-eta" id="spartan">Lorem @ ipsum</p>
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="custom-slider" id="tes-mobile">
+
+
+    <div class="custom-slider-header-title">
+      <h1 id="spartan" class="custom-hero-section-title">What clients say</h1>
+    </div>
+
+    <div class="custom-slider-content">
+
+      <button class="custom-prev" onclick="changeCustomSlide(-1)">
+        <img src="images/Left arrow.svg">
+      </button>
+      <button class="custom-next" onclick="changeCustomSlide(1)">
+        <img src="images/Right arrow.svg">
+      </button>
+
+
+      <div class="custom-slide">
+        <img src="images/pfp.png" class="tes-mob-pfp">
+        <p id="quicksand" class="mob-tes-text">Sprout Marketing has been an absolute pleasure to work with. They are
+          very responsive to our
+          needs and have a great understanding of the nuances of Web3 marketing with content creation and getting social
+          engagement.</p>
+        <p class="tes-mob-name" id="spartan">Jeff</p>
+        <p class="tes-mob-eta" id="spartan">Founder @ Steadefi</p>
+      </div>
+
+
+      <div class="custom-slide">
+        <img src="images/pfp 2.png" class="tes-mob-pfp">
+        <p id="quicksand" class="mob-tes-text">Working with Sprout Marketing has been a game-changer for our brand!
+          Their seamless communication, strategic adaptability, and high-quality content drove a 200% boost in our X
+          audience and engagement, plus a 500% surge in impressions within just the first month. Their results speak for
+          themselves—truly outstanding!</p>
+        <p class="tes-mob-name" id="spartan">Pryia</p>
+        <p class="tes-mob-eta" id="spartan">Operations @ tastycrypto</p>
+      </div>
+
+      <div class="custom-slide">
+        <img src="images/pfp 3.png" class="tes-mob-pfp">
+        <p id="quicksand" class="mob-tes-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto atque
+          officiis enim aliquam et id necessitatibus. Alias deleniti iure tenetur itaque, qui eaque molestias ut
+          delectus quam quidem quisquam deserunt atque sapiente, nisi tempora inventore nemo fugiat, iste ducimus
+          odit.
+          iusto dicta.</p>
+        <p class="tes-mob-name" id="spartan">Lorem</p>
+        <p class="tes-mob-eta" id="spartan">Lorem @ ipsum</p>
+      </div>
+
+
+
+    </div>
+    <div class="custom-dots">
+      <span class="custom-dot" onclick="currentCustomSlide(1)"></span>
+      <span class="custom-dot" onclick="currentCustomSlide(2)"></span>
+      <span class="custom-dot" onclick="currentCustomSlide(3)"></span>
+    </div>
+  </div>
 
 
 

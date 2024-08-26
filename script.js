@@ -530,3 +530,155 @@ gsap.fromTo(".rigth-side-cmm",
   }
 );
 
+
+
+
+
+
+
+let customSlideIndex = 1;
+showCustomSlides(customSlideIndex);
+
+function changeCustomSlide(n) {
+  showCustomSlides(customSlideIndex += n);
+}
+
+function currentCustomSlide(n) {
+  showCustomSlides(customSlideIndex = n);
+}
+
+function showCustomSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("custom-slide");
+  let dots = document.getElementsByClassName("custom-dot");
+  if (n > slides.length) { customSlideIndex = 1 }
+  if (n < 1) { customSlideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" custom-actives", "");
+  }
+  slides[customSlideIndex - 1].style.display = "block";
+  dots[customSlideIndex - 1].className += " custom-actives";
+}
+
+
+
+
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".tes-title",
+  {
+    opacity: 0,
+    y: 100
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".tes-title", // Element that triggers the animation
+      start: "top bottom", // When the top of the element hits the bottom of the viewport
+      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
+      once: true           // Optional: animate only once
+    }
+  }
+);
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".custom-slider-header-title",
+  {
+    opacity: 0,
+    y: 50
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".custom-slider-header-title", // Element that triggers the animation
+      start: "top bottom", // When the top of the element hits the bottom of the viewport
+      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
+      once: true           // Optional: animate only once
+    }
+  }
+);
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".custom-slider-content",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".custom-slider-content", // Element that triggers the animation
+      start: "top bottom", // When the top of the element hits the bottom of the viewport
+      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
+      once: true           // Optional: animate only once
+    }
+  }
+);
+
+
+
+gsap.utils.toArray(".custom-dots .custom-dot").forEach((dot, index) => {
+  gsap.fromTo(
+    dot, // Select each custom dot
+    {
+      opacity: 0,
+      y: 50
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.3,
+      delay: index * 0.1, // Stagger the animation for each dot
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".custom-dots", // Trigger when the custom dots container enters the viewport
+        start: "top bottom", // Start the animation when the top of the element hits the bottom of the viewport
+        end: "bottom top",   // End when the bottom of the element leaves the top of the viewport
+        once: true           // Only animate once
+      }
+    }
+  );
+});
+
+
+
+// Target all .first-tes elements
+gsap.utils.toArray(".testies .first-tes").forEach((tes, index) => {
+  gsap.fromTo(
+    tes, // Select each .first-tes container
+    {
+      opacity: 0,
+      y: 50
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.5, // Adjust duration as needed
+      delay: index * 0.2, // Stagger the animation for each .first-tes
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".testies", // Trigger when the .testies container enters the viewport
+        start: "top bottom", // Start the animation when the top of the element hits the bottom of the viewport
+        end: "bottom top",   // End when the bottom of the element leaves the top of the viewport
+        once: true           // Only animate once
+      }
+    }
+  );
+});
