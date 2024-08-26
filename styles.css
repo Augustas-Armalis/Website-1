@@ -275,6 +275,14 @@ nav.visible {
 }
 
 
+#section-foot {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  position: relative;
+}
+
+
 
 
 
@@ -1069,7 +1077,8 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
   display: block;
 }
 
-.service-section-button {
+.service-section-button,
+.sub-button {
   width: fit-content;
   height: 45px;
   flex-shrink: 0;
@@ -1084,13 +1093,15 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
   transition: all 0.3s;
 }
 
-.service-section-button:hover {
+.service-section-button:hover,
+.sub-button:hover {
   background: #2f4737;
   cursor: pointer;
   transform: scale(1.05);
 }
 
-.service-section-CTA {
+.service-section-CTA,
+.news-section-CTA {
   color: #ffffff;
   font-family: "League Spartan";
   font-size: 32px;
@@ -1222,6 +1233,106 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
 
 
 
+.newsletter-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.news-title {
+  margin-top: 128px;
+}
+
+.news-alt {
+  margin-bottom: 64px;
+}
+
+.news-alt h3 {
+  color: #747474;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: normal;
+  margin-top: 16px;
+}
+
+
+.news-top-desc {
+  color: #436851;
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 24px;
+}
+
+#name,
+#email {
+  width: 900px;
+  height: fit-content;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.30);
+  box-shadow: 0px 11px 28.1px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(9px);
+  border: none;
+  font-size: 24px;
+  font-family: "Quicksand";
+  font-weight: 700;
+  margin-bottom: 36px;
+  margin-top: 16px;
+}
+
+.button-container-news {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1232,6 +1343,12 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
 
 
 @media (max-width: 1200px) {
+
+
+  #name,
+  #email {
+    width: 700px;
+  }
 
   .content {
     display: none;
@@ -1773,6 +1890,126 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
 
 @media (max-width: 850px) {
 
+  .nav-button-cmm {
+    padding-top: 3px;
+    width: fit-content;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 52px;
+    background: #ffffff;
+    border: none;
+    display: flex;
+    align-items: center;
+    transition: background 0.15s ease;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+  }
+
+  .nav-button-cmm:hover {
+    background: rgb(230, 230, 230);
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+  .nav-btn-text-cmm {
+    color: #000000;
+    font-family: "League Spartan";
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .newsletter-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 24px;
+    margin-left: 24px;
+    text-align: center;
+  }
+
+  .news-title {
+    margin-top: 92px;
+    margin-bottom: 32px;
+  }
+
+  .news-title h1 {
+    line-height: 130%;
+  }
+
+  .news-alt {
+    display: none;
+  }
+
+
+
+  .news-top-desc {
+    color: #436851;
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 16px;
+    text-align: start;
+  }
+
+  #subscriptionForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #name,
+  #email {
+    width: 80vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: -16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0px 11px 28.1px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(9px);
+    border: none;
+    font-size: 20px;
+    font-family: "Quicksand";
+    font-weight: 700;
+    margin-bottom: 36px;
+    margin-top: 16px;
+  }
+
+  .button-container-news {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+
+
+
 
 
 
@@ -1886,15 +2123,16 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
     padding: 32px;
     width: fit-content;
     align-items: center;
-    margin-right: 32px;
-    margin-left: 32px;
+    margin-right: 16px;
+    margin-left: 16px;
   }
 
   .content.active {
     display: block;
   }
 
-  .service-section-button {
+  .service-section-button,
+  .sub-button {
     width: fit-content;
     height: 45px;
     flex-shrink: 0;
@@ -1909,13 +2147,15 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
     transition: all 0.3s;
   }
 
-  .service-section-button:hover {
+  .service-section-button:hover,
+  .sub-button:hover {
     background: #2f4737;
     cursor: pointer;
     transform: scale(1.05);
   }
 
-  .service-section-CTA {
+  .service-section-CTA,
+  .news-section-CTA {
     color: #ffffff;
     font-family: "League Spartan";
     font-size: 32px;
@@ -2034,13 +2274,15 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
     font-size: 20px;
   }
 
-  .service-section-button {
+  .service-section-button,
+  .sub-button {
     padding-top: 2px;
     height: 35px;
     width: 100%;
   }
 
-  .service-section-CTA {
+  .service-section-CTA,
+  .news-section-CTA {
     color: #ffffff;
     font-family: "League Spartan";
     font-size: 20px;
@@ -2296,14 +2538,14 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
 
   .cmm-title {
     color: white;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     line-height: 110%;
     font-size: 29px;
   }
 
   .cmm-alt {
     color: #B8B8B8;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
     line-height: 130%;
   }
 
