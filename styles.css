@@ -196,7 +196,6 @@ nav.visible {
 }
 
 .nav-button {
-  padding-top: 3px;
   width: fit-content;
   height: 40px;
   flex-shrink: 0;
@@ -263,6 +262,15 @@ nav.visible {
   justify-content: center;
   height: fit-content;
   position: relative;
+  margin-top: 128px;
+}
+
+#section-off {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  position: relative;
+  z-index: 9;
   margin-top: 128px;
 }
 
@@ -374,7 +382,6 @@ nav.visible {
 }
 
 .hero-section-button {
-  padding-top: 3px;
   width: fit-content;
   height: 45px;
   flex-shrink: 0;
@@ -392,7 +399,6 @@ nav.visible {
   background: #2f4737;
   cursor: pointer;
   transform: scale(1.05);
-
 }
 
 .hero-section-CTA {
@@ -961,6 +967,244 @@ nav.visible {
 
 
 
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 42px;
+}
+
+.toggle {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.30);
+  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(9px);
+  border-radius: 999px;
+  cursor: pointer;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.toggle-text {
+  flex: 1;
+  text-align: center;
+  z-index: 2;
+  color: white;
+  border-radius: 99999px;
+  transition: color 0.3s ease;
+  font-size: 32px;
+  font-family: "League Spartan";
+  font-weight: 700;
+  white-space: nowrap;
+  margin-right: 32px;
+  margin-left: 26px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.toggle-background {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 50%;
+  border-radius: 9999px;
+  background-color: white;
+  transition: left 0.3s ease;
+
+}
+
+input:checked+.toggle-label .toggle-background {
+  left: calc(50% + 5px);
+  /* Move background to the right side */
+}
+
+input:checked+.toggle-label #toggle-text-companies {
+  color: rgba(184, 184, 184, 1);
+  /* Change "For companies" text color to white when inactive */
+}
+
+input:checked+.toggle-label #toggle-text-founders {
+  color: #1a1a1a;
+  /* Active text color for "For founders" */
+}
+
+input:not(:checked)+.toggle-label #toggle-text-companies {
+  color: #1a1a1a;
+  /* Active text color for "For companies" */
+}
+
+input:not(:checked)+.toggle-label #toggle-text-founders {
+  color: rgba(184, 184, 184, 1);
+  /* Inactive text color for "For founders" */
+}
+
+.content {
+  display: none;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 8px 43.2px 0px rgba(0, 0, 0, 0.91);
+  padding: 42px;
+  width: 900px;
+  align-items: center;
+}
+
+.content.active {
+  display: block;
+}
+
+.service-section-button {
+  width: fit-content;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 52px;
+  background: #1A281F;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s;
+}
+
+.service-section-button:hover {
+  background: #2f4737;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.service-section-CTA {
+  color: #ffffff;
+  font-family: "League Spartan";
+  font-size: 32px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 32px;
+  margin-right: 32px;
+  padding-top: 5px;
+}
+
+
+
+.grid-offer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  /* Align the grid image to the bottom of the section */
+  z-index: -1;
+}
+
+.grid-offer img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  /* Ensure the image itself is aligned to the bottom */
+}
+
+
+.offer-background {
+  background: #1A281F;
+  box-shadow: 0px 14px 26.5px 0px rgba(0, 0, 0, 0.25);
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: -2;
+}
+
+.offer-container {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9;
+  margin-bottom: 92px;
+}
+
+.offer-title-text {
+  color: white;
+  margin-top: 92px;
+  margin-bottom: 42px;
+}
+
+
+
+.offer-heading {
+  background: linear-gradient(97deg, #1A281F -2.4%, #5B8D6D 83.2%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+}
+
+
+.offer-text {
+  color: #747474;
+  font-style: normal;
+  margin-bottom: 32px;
+}
+
+.divider {
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  margin-bottom: 32px;
+}
+
+.offer-below-title h2 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.bulleted-list {
+  display: flex;
+  gap: 128px;
+  margin-bottom: 42px;
+}
+
+.first-two-items,
+.last-two-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ball-item {
+  width: 20px;
+  height: 20px;
+  background-color: #5B8D6D;
+  border-radius: 9999px;
+}
+
+#bullet-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+
+
+
+
 
 
 
@@ -988,6 +1232,24 @@ nav.visible {
 
 
 @media (max-width: 1200px) {
+
+  .content {
+    display: none;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 8px 43.2px 0px rgba(0, 0, 0, 0.91);
+    padding: 42px;
+    width: fit-content;
+    align-items: center;
+    margin-right: 32px;
+    margin-left: 32px;
+  }
+
+  .bulleted-list {
+    display: flex;
+    gap: 64px;
+    margin-bottom: 42px;
+  }
 
 
   .custom-slider {
@@ -1480,7 +1742,345 @@ nav.visible {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 850px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 42px;
+  }
+
+  .toggle {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .toggle input {
+    display: none;
+  }
+
+  .toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(9px);
+    border-radius: 999px;
+    cursor: pointer;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0px;
+  }
+
+  .toggle-text {
+    flex: 1;
+    text-align: center;
+    z-index: 2;
+    color: white;
+    border-radius: 99999px;
+    transition: color 0.3s ease;
+    font-size: 22px;
+    font-family: "League Spartan";
+    font-weight: 700;
+    white-space: nowrap;
+    margin-right: 16px;
+    margin-left: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .toggle-background {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 50%;
+    border-radius: 9999px;
+    background-color: white;
+    transition: left 0.3s ease;
+
+  }
+
+  input:checked+.toggle-label .toggle-background {
+    left: calc(50% + 5px);
+    /* Move background to the right side */
+  }
+
+  input:checked+.toggle-label #toggle-text-companies {
+    color: rgba(184, 184, 184, 1);
+    /* Change "For companies" text color to white when inactive */
+  }
+
+  input:checked+.toggle-label #toggle-text-founders {
+    color: #1a1a1a;
+    /* Active text color for "For founders" */
+  }
+
+  input:not(:checked)+.toggle-label #toggle-text-companies {
+    color: #1a1a1a;
+    /* Active text color for "For companies" */
+  }
+
+  input:not(:checked)+.toggle-label #toggle-text-founders {
+    color: rgba(184, 184, 184, 1);
+    /* Inactive text color for "For founders" */
+  }
+
+  .content {
+    display: none;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 8px 43.2px 0px rgba(0, 0, 0, 0.91);
+    padding: 32px;
+    width: fit-content;
+    align-items: center;
+    margin-right: 32px;
+    margin-left: 32px;
+  }
+
+  .content.active {
+    display: block;
+  }
+
+  .service-section-button {
+    width: fit-content;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 52px;
+    background: #1A281F;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+  }
+
+  .service-section-button:hover {
+    background: #2f4737;
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+  .service-section-CTA {
+    color: #ffffff;
+    font-family: "League Spartan";
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 32px;
+    margin-right: 32px;
+    padding-top: 5px;
+  }
+
+
+
+  .grid-offer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    /* Align the grid image to the bottom of the section */
+    z-index: -1;
+  }
+
+  .grid-offer img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    /* Ensure the image itself is aligned to the bottom */
+  }
+
+
+  .offer-background {
+    background: #1A281F;
+    box-shadow: 0px 14px 26.5px 0px rgba(0, 0, 0, 0.25);
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index: -2;
+    overflow: hidden;
+  }
+
+  .offer-container {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9;
+    margin-bottom: 64px;
+  }
+
+  .offer-title-text {
+    color: white;
+    margin-top: 64px;
+    margin-bottom: 32px;
+  }
+
+
+
+  .offer-heading h1 {
+    background: linear-gradient(97deg, #1A281F -2.4%, #5B8D6D 83.2%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+    font-size: 36px;
+  }
+
+
+  .offer-text {
+    color: #747474;
+    font-style: normal;
+    margin-bottom: 24px;
+  }
+
+  .divider {
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    margin-bottom: 24px;
+  }
+
+  .offer-below-title h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .bulleted-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 42px;
+    gap: 8px;
+  }
+
+  .first-two-items,
+  .last-two-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ball-item {
+    width: 10px;
+    height: 10px;
+    background-color: #5B8D6D;
+    border-radius: 9999px;
+    flex-shrink: 0
+  }
+
+  #bullet-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .button-text {
+    font-size: 20px;
+  }
+
+  .service-section-button {
+    padding-top: 2px;
+    height: 35px;
+    width: 100%;
+  }
+
+  .service-section-CTA {
+    color: #ffffff;
+    font-family: "League Spartan";
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 32px;
+    margin-right: 32px;
+    padding-top: 0px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #section-off {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    position: relative;
+    z-index: 9;
+    margin-top: 92px;
+  }
 
 
 
@@ -1502,6 +2102,15 @@ nav.visible {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  .cmm-bakcground-full {
+    background: linear-gradient(180deg, #1A281F 50%, #5C8E6E 125.15%);
+    box-shadow: 0px 10px 30px -1px rgba(0, 0, 0, 0.28);
+    width: 100vw;
+    align-items: center;
+    display: flex;
     justify-content: center;
   }
 

@@ -1,98 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider</title>
+    <title>Toggle Switch</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="slider">
-        <div class="slider-content">
-
-            <div class="slide">
-                <div class="top-row">
-                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-                    <div class="icon1"></div>
-                    <h2 class="title">Manage</h2>
-                </div>
-                <p class="description">Focus on product, our in-house team<br> handles all your marketing</p>
-                <div class="image-placeholder">
-                    <img src="Framework/Manage.png">
-                </div>
-            </div>
-            <div class="slide">
-                <div class="top-row">
-                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-                    <div class="icon2"></div>
-                    <h2 class="title">Engage</h2>
-                </div>
-                <p class="description">Community is built through<br>connection & conversation</p>
-                <div class="image-placeholder">
-                    <img src="Framework/Engage.png">
-                </div>
-            </div>
-            <div class="slide">
-                <div class="top-row">
-                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-                    <div class="icon3"></div>
-                    <h2 class="title">Create</h2>
-                </div>
-                <p class="description">We create the best content for<br>your Brand in Web3</p>
-                <div class="image-placeholder">
-                    <img src="Framework/Create.png">
-                </div>
-            </div>
-            <div class="slide">
-                <div class="top-row">
-                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-                    <div class="icon4"></div>
-                    <h2 class="title">Connect</h2>
-                </div>
-                <p class="description">Stay up to date through fast<br> communication & weekly calls</p>
-                <div class="image-placeholder">
-                    <img src="Framework/Connect.png">
-                </div>
-            </div>
-            <div class="slide">
-                <div class="top-row">
-                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-                    <div class="icon5"></div>
-                    <h2 class="title">Analyze</h2>
-                </div>
-                <p class="description">Receive weekly & monthly<br> performance reports</p>
-                <div class="image-placeholder">
-                    <img src="Framework/Analyze.png">
-                </div>
-            </div>
-            <div class="slide">
-                <div class="top-row">
-                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-                    <div class="icon6"></div>
-                    <h2 class="title">Strategize</h2>
-                </div>
-                <p class="description">We approach every project with<br>intensive market research</p>
-                <div class="image-placeholder">
-                    <img src="Framework/Strategize.png">
-                </div>
-            </div>
-
-        </div>
-        <div class="dots">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
+    <div class="toggle-container">
+        <div class="toggle">
+            <input type="checkbox" id="toggle-switch">
+            <label for="toggle-switch" class="toggle-label">
+                <span class="toggle-text" id="toggle-text-companies">For companies</span>
+                <span class="toggle-text" id="toggle-text-founders">For founders</span>
+                <span class="toggle-background"></span>
+            </label>
         </div>
     </div>
+
+    <div id="content-companies" class="content active">
+        <h2>Social Media Management</h2>
+        <p>Our classic service. Premium Web3 content for companies that want peace of mind to work on what matters. We
+            work directly in your team and bring A-class experience.</p>
+        <ul>
+            <li>1-Week setup</li>
+            <li>Weekly calls & reports</li>
+            <li>Full content curation</li>
+            <li>Engagement & posting</li>
+        </ul>
+        <button>Book a call to start</button>
+    </div>
+
+    <div id="content-founders" class="content">
+        <h2>Founder Resources</h2>
+        <p>Curated resources for startup founders to help them succeed in the fast-paced world of entrepreneurship.</p>
+        <ul>
+            <li>Mentorship programs</li>
+            <li>Investment opportunities</li>
+            <li>Networking events</li>
+            <li>Growth strategies</li>
+        </ul>
+        <button>Get started now</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>

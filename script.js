@@ -675,10 +675,128 @@ gsap.utils.toArray(".testies .first-tes").forEach((tes, index) => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: ".testies", // Trigger when the .testies container enters the viewport
-        start: "top bottom", // Start the animation when the top of the element hits the bottom of the viewport
-        end: "bottom top",   // End when the bottom of the element leaves the top of the viewport
+        start: "top 80%", // Start the animation when the top of the element hits the bottom of the viewport   // End when the bottom of the element leaves the top of the viewport
         once: true           // Only animate once
       }
     }
   );
 });
+
+
+
+
+
+
+
+
+
+
+// script.js
+
+document.getElementById('toggle-switch').addEventListener('change', function () {
+  if (this.checked) {
+    document.getElementById('content-companies').classList.remove('active');
+    document.getElementById('content-founders').classList.add('active');
+  } else {
+    document.getElementById('content-founders').classList.remove('active');
+    document.getElementById('content-companies').classList.add('active');
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".offer-title",
+  {
+    opacity: 0,
+    y: 50
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".offer-title", // Element that triggers the animation
+      start: "top bottom", // When the top of the element hits the bottom of the viewport
+      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
+      once: true           // Optional: animate only once
+    }
+  }
+);
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".toggle-container",
+  {
+    opacity: 0,
+    y: 50
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".toggle-container", // Element that triggers the animation
+      start: "top bottom", // When the top of the element hits the bottom of the viewport
+      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
+      once: true           // Optional: animate only once
+    }
+  }
+);
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".content",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".content",
+      toggleActions: "play none none none", // Only plays the animation on enter
+    }
+  }
+);
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".grid-offer",
+  {
+    opacity: 0,
+    y: 50
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".grid-offer", // Element that triggers the animation
+      start: "top 130%", // When the top of the element hits the bottom of the viewport
+      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
+      once: true           // Optional: animate only once
+    }
+  }
+);
