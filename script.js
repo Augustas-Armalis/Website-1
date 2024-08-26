@@ -211,7 +211,7 @@ gsap.fromTo(".grid-hero",
     opacity: 1,
     delay: 0.2,    // Fade to fully visible
     y: 0,          // Move to the original position
-    duration: 1.5, // Duration of 1.5 seconds
+    duration: 1, // Duration of 1.5 seconds
     ease: "power2.out" // Smooth easing effect
   }
 );
@@ -296,29 +296,237 @@ gsap.fromTo(".framework-title",
 
 
 
+
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
 function changeSlide(n) {
-    showSlides(slideIndex += n);
+  showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
-    showSlides(slideIndex = n);
+  showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" actives", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " actives";
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" actives", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " actives";
 }
+
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Framework buttons animation
+gsap.fromTo(
+  ".framework-buttons > div", // Select all buttons inside the container
+  {
+    opacity: 0,
+    y: 100
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.4,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".framework-title", // Element that triggers the animation
+      start: "top bottom", // When the top of the element hits the bottom of the viewport
+      end: "bottom top",   // When the bottom of the element hits the top of the viewport
+      once: true           // Optional: animate only once
+    },
+    stagger: 0.1 // Stagger the animation by 0.1 seconds
+  }
+);
+
+
+
+// Framework description animation
+gsap.utils.toArray(".framework-desc-container > div").forEach((desc) => {
+  gsap.fromTo(
+    desc, // Select each description
+    {
+      opacity: 0,
+      y: 100
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".framework-title", // Same trigger as the framework buttons
+        start: "top bottom", // Start the animation when the top of the element hits the bottom of the viewport
+        end: "bottom top",   // End when the bottom of the element leaves the top of the viewport
+        once: true           // Only animate once
+      }
+    }
+  );
+});
+
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(
+  ".frm-image-container", // Select the container
+  {
+    opacity: 0, // Start with opacity 0 (invisible)
+  },
+  {
+    opacity: 1, // End with opacity 1 (fully visible)
+    duration: 0.5, // Animation duration
+    ease: "power2.out", // Easing function for smooth transition
+    scrollTrigger: {
+      trigger: ".frm-image-container", // Element that triggers the animation
+      start: "top 80%", // When the top of the container hits 80% of the viewport height
+      end: "bottom 20%", // When the bottom of the container hits 20% of the viewport height
+      once: true // Animate only once
+    }
+  }
+);
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".phone-slider-header-title",
+  {
+    opacity: 0,
+    y: 100
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".phone-slider-header-title",
+      toggleActions: "play none none none", // Only plays the animation on enter
+    }
+  }
+);
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray([".top-row", ".description", ".image-placeholder"]).forEach((element, index) => {
+  gsap.fromTo(
+    element,
+    {
+      opacity: 0,
+      y: 100
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: element, // Same trigger as the framework buttons
+        start: "top bottom", // Start the animation when the top of the element hits the bottom of the viewport
+        end: "bottom top",   // End when the bottom of the element leaves the top of the viewport
+        once: true           // Only animate once
+      }
+    }
+  );
+});
+
+
+
+gsap.utils.toArray(".dots .dot").forEach((dot, index) => {
+  gsap.fromTo(
+    dot, // Select each dot
+    {
+      opacity: 0,
+      y: 50
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.3,
+      delay: index * 0.1, // Stagger the animation for each dot
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".dots", // Trigger when the dots container enters the viewport
+        start: "top bottom", // Start the animation when the top of the element hits the bottom of the viewport
+        end: "bottom top",   // End when the bottom of the element leaves the top of the viewport
+        once: true           // Only animate once
+      }
+    }
+  );
+});
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".cmm-title",
+  {
+    opacity: 0,
+    y: 100
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".cmm-title",
+      toggleActions: "play none none none", // Only plays the animation on enter
+    }
+  }
+);
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".cmm-alt",
+  {
+    opacity: 0,
+    y: 100
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".cmm-alt",
+      toggleActions: "play none none none", // Only plays the animation on enter
+    }
+  }
+);
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".rigth-side-cmm",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".rigth-side-cmm",
+      toggleActions: "play none none none", // Only plays the animation on enter
+    }
+  }
+);
+
