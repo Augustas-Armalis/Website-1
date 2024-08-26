@@ -7,114 +7,80 @@ function updateHeading() {
   }
 }
 
-// Initial check
 updateHeading();
-
-// Add event listener for resizing
 window.addEventListener('resize', updateHeading);
-
-
-
-
-
-
-
-
-
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const logosSlide = document.querySelector('.logos-slide');
   if (logosSlide) {
-    logosSlide.style.animation = 'none'; // Pause animation
-    logosSlide.offsetHeight; // Trigger a reflow
-    logosSlide.style.animation = ''; // Resume animation
+    logosSlide.style.animation = 'none';
+    logosSlide.offsetHeight;
+    logosSlide.style.animation = '';
   }
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const logos = document.querySelector(".logos");
   const original = document.querySelector(".logos-slide");
   const copy = original.cloneNode(true);
 
-  // Append the clone to the container
   logos.appendChild(copy);
+  logos.offsetHeight;
 
-  // Trigger a reflow to ensure that the clone is correctly applied
-  logos.offsetHeight; // Trigger reflow
-
-  // Optionally, you might need to reset the animation to ensure smooth continuation
   logos.querySelectorAll(".logos-slide").forEach(slide => {
-    slide.style.animation = 'none'; // Pause the animation
-    slide.offsetHeight; // Trigger reflow
-    slide.style.animation = ''; // Resume the animation
+    slide.style.animation = 'none';
+    slide.offsetHeight;
+    slide.style.animation = '';
   });
 });
 
-
 let lastScrollTop = 0;
 const nav = document.querySelector('nav');
-
 
 window.addEventListener('scroll', function () {
   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
   if (currentScroll > lastScrollTop) {
-    // Scrolling down
     nav.classList.remove('visible');
     nav.classList.add('hidden');
   } else {
-    // Scrolling up
     nav.classList.remove('hidden');
     nav.classList.add('visible');
   }
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
-
-
 
 let lastScrollTopMobile = 0;
 const mobileNav = document.querySelector('.mobile-nav');
 
-// Function to update visibility based on scroll direction
 function handleScroll() {
   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
   if (currentScroll === 0) {
-    // At the top of the page
-    mobileNav.style.background = 'none'; // Reset background
-    mobileNav.style.boxShadow = 'none'; // Remove box-shadow
-    mobileNav.style.backdropFilter = 'none'; // Remove backdrop-filter
+    mobileNav.style.background = 'none';
+    mobileNav.style.boxShadow = 'none';
+    mobileNav.style.backdropFilter = 'none';
   } else if (currentScroll > lastScrollTopMobile) {
-    // Scrolling down
     mobileNav.classList.remove('visible');
     mobileNav.classList.add('hidden');
     mobileNav.style.background = 'rgba(255, 255, 255, 0.30)';
     mobileNav.style.boxShadow = '0px 8px 25px 0px rgba(0, 0, 0, 0.25)';
     mobileNav.style.backdropFilter = 'blur(10px)';
   } else {
-    // Scrolling up
     mobileNav.classList.remove('hidden');
     mobileNav.classList.add('visible');
   }
 
-  lastScrollTopMobile = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+  lastScrollTopMobile = currentScroll <= 0 ? 0 : currentScroll;
 }
 
-// Add scroll event listener
 window.addEventListener('scroll', handleScroll);
 
-// Initialize state on page load
 window.addEventListener('load', function () {
-  mobileNav.style.background = 'none'; // Reset background
-  mobileNav.style.boxShadow = 'none'; // Remove box-shadow
-  mobileNav.style.backdropFilter = 'none'; // Remove backdrop-filter
+  mobileNav.style.background = 'none';
+  mobileNav.style.boxShadow = 'none';
+  mobileNav.style.backdropFilter = 'none';
 });
-
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
   const mobileXContainer = document.querySelector('.mobile-x-container');
@@ -136,28 +102,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Event listener for the mobile X container
   mobileXContainer.addEventListener('click', toggleNav);
 
-
-  // Event listeners for each link in the mobile opened nav
   const navLinks = mobileOpenedNav.querySelectorAll('a');
   navLinks.forEach(link => {
     link.addEventListener('click', function () {
-      // Call the toggleNav function
       toggleNav();
     });
   });
-
-
 });
-
-
-
-
-
-
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -171,7 +124,7 @@ gsap.fromTo(".hero-section-right-side",
     opacity: 1,
     duration: 1,
     ease: "power2.out",
-    delay: 0.1, // Add a 0.5 second delay before the animation starts
+    delay: 0.1,
     scrollTrigger: {
       trigger: ".hero-section-right-side",
       start: "top 80%",
@@ -180,93 +133,65 @@ gsap.fromTo(".hero-section-right-side",
   }
 );
 
-
-
-// Fade in the element when it enters the viewport
 gsap.fromTo(".hero-section-left-side",
   {
-    opacity: 0  // Start fully transparent
+    opacity: 0
   },
   {
-    opacity: 1, // Fade to fully visible
-    duration: 1, // Duration of 1 second
+    opacity: 1,
+    duration: 1,
     ease: "power2.out",
     delay: 0.3,
     scrollTrigger: {
       trigger: ".hero-section-left-side",
-      start: "top 80%", // Start the animation when the top of the element hits 80% of the viewport
+      start: "top 80%",
       toggleActions: "play none none none"
     }
   }
 );
 
-
-// Animate the element to fade in and move from bottom to top on page load
 gsap.fromTo(".grid-hero",
   {
-    opacity: 0,    // Start fully transparent
-    y: 100         // Start 100 pixels below the original position
+    opacity: 0,
+    y: 100
   },
   {
     opacity: 1,
-    delay: 0.2,    // Fade to fully visible
-    y: 0,          // Move to the original position
-    duration: 1, // Duration of 1.5 seconds
-    ease: "power2.out" // Smooth easing effect
+    delay: 0.2,
+    y: 0,
+    duration: 1,
+    ease: "power2.out"
   }
 );
 
-
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
-  const buttons = document.querySelectorAll('.framework-buttons > div'); // Select all buttons
-  const images = document.querySelectorAll('.frm-image-container > div'); // Select all images
-  const descriptions = document.querySelectorAll('.framework-desc-container > div'); // Select all descriptions
+  const buttons = document.querySelectorAll('.framework-buttons > div');
+  const images = document.querySelectorAll('.frm-image-container > div');
+  const descriptions = document.querySelectorAll('.framework-desc-container > div');
 
   function handleButtonClick(e) {
-    // Remove active state from all buttons, images, and descriptions
     buttons.forEach(btn => btn.classList.remove('active'));
     images.forEach(img => img.classList.remove('active-img'));
     descriptions.forEach(desc => desc.classList.remove('active-desc'));
 
-    // Add active state to the clicked button
     const clickedButton = e.currentTarget;
     clickedButton.classList.add('active');
 
-    // Show the corresponding image and description
     const targetImgId = clickedButton.getAttribute('data-target');
     document.querySelector(`.${targetImgId}`).classList.add('active-img');
 
-    // Determine which description to show based on button clicked
-    const targetDescClass = targetImgId.replace('frm-img', 'desc'); // e.g., frm-img1 => desc1
+    const targetDescClass = targetImgId.replace('frm-img', 'desc');
     document.querySelector(`.${targetDescClass}`).classList.add('active-desc');
   }
 
-  // Initialize by showing the first button, image, and description as active
   buttons[0].classList.add('active');
   images[0].classList.add('active-img');
   descriptions[0].classList.add('active-desc');
 
-  // Attach event listeners to each button
   buttons.forEach(button => {
     button.addEventListener('click', handleButtonClick);
   });
 });
-
-
-
-
-
 
 gsap.fromTo(".framework-title",
   {
@@ -279,24 +204,13 @@ gsap.fromTo(".framework-title",
     duration: 0.5,
     ease: "power2.out",
     scrollTrigger: {
-      trigger: ".framework-title", // Element that triggers the animation
-      start: "top bottom", // When the top of the element hits the bottom of the viewport
-      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
-      once: true           // Optional: animate only once
+      trigger: ".framework-title",
+      start: "top bottom",
+      end: "bottom top",
+      once: true
     }
   }
 );
-
-
-
-
-
-
-
-
-
-
-
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -325,15 +239,10 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " actives";
 }
 
-
-
-
-
 gsap.registerPlugin(ScrollTrigger);
 
-// Framework buttons animation
 gsap.fromTo(
-  ".framework-buttons > div", // Select all buttons inside the container
+  ".framework-buttons > div",
   {
     opacity: 0,
     y: 100
@@ -344,21 +253,18 @@ gsap.fromTo(
     duration: 0.4,
     ease: "power2.out",
     scrollTrigger: {
-      trigger: ".framework-title", // Element that triggers the animation
-      start: "top bottom", // When the top of the element hits the bottom of the viewport
-      end: "bottom top",   // When the bottom of the element hits the top of the viewport
-      once: true           // Optional: animate only once
+      trigger: ".framework-title",
+      start: "top bottom",
+      end: "bottom top",
+      once: true
     },
-    stagger: 0.1 // Stagger the animation by 0.1 seconds
+    stagger: 0.1
   }
 );
 
-
-
-// Framework description animation
 gsap.utils.toArray(".framework-desc-container > div").forEach((desc) => {
   gsap.fromTo(
-    desc, // Select each description
+    desc,
     {
       opacity: 0,
       y: 100
@@ -369,39 +275,34 @@ gsap.utils.toArray(".framework-desc-container > div").forEach((desc) => {
       duration: 0.3,
       ease: "power2.out",
       scrollTrigger: {
-        trigger: ".framework-title", // Same trigger as the framework buttons
-        start: "top bottom", // Start the animation when the top of the element hits the bottom of the viewport
-        end: "bottom top",   // End when the bottom of the element leaves the top of the viewport
-        once: true           // Only animate once
+        trigger: ".framework-title",
+        start: "top bottom",
+        end: "bottom top",
+        once: true
       }
     }
   );
 });
 
-
-
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(
-  ".frm-image-container", // Select the container
+  ".frm-image-container",
   {
-    opacity: 0, // Start with opacity 0 (invisible)
+    opacity: 0
   },
   {
-    opacity: 1, // End with opacity 1 (fully visible)
-    duration: 0.5, // Animation duration
-    ease: "power2.out", // Easing function for smooth transition
+    opacity: 1,
+    duration: 0.5,
+    ease: "power2.out",
     scrollTrigger: {
-      trigger: ".frm-image-container", // Element that triggers the animation
-      start: "top 80%", // When the top of the container hits 80% of the viewport height
-      end: "bottom 20%", // When the bottom of the container hits 20% of the viewport height
-      once: true // Animate only once
+      trigger: ".frm-image-container",
+      start: "top 80%",
+      end: "bottom 20%",
+      once: true
     }
   }
 );
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -417,11 +318,10 @@ gsap.fromTo(".phone-slider-header-title",
     ease: "power2.out",
     scrollTrigger: {
       trigger: ".phone-slider-header-title",
-      toggleActions: "play none none none", // Only plays the animation on enter
+      toggleActions: "play none none none"
     }
   }
 );
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -438,20 +338,18 @@ gsap.utils.toArray([".top-row", ".description", ".image-placeholder"]).forEach((
       duration: 0.3,
       ease: "power2.out",
       scrollTrigger: {
-        trigger: element, // Same trigger as the framework buttons
-        start: "top bottom", // Start the animation when the top of the element hits the bottom of the viewport
-        end: "bottom top",   // End when the bottom of the element leaves the top of the viewport
-        once: true           // Only animate once
+        trigger: element,
+        start: "top bottom",
+        end: "bottom top",
+        once: true
       }
     }
   );
 });
 
-
-
 gsap.utils.toArray(".dots .dot").forEach((dot, index) => {
   gsap.fromTo(
-    dot, // Select each dot
+    dot,
     {
       opacity: 0,
       y: 50
@@ -460,20 +358,17 @@ gsap.utils.toArray(".dots .dot").forEach((dot, index) => {
       opacity: 1,
       y: 0,
       duration: 0.3,
-      delay: index * 0.1, // Stagger the animation for each dot
+      delay: index * 0.1,
       ease: "power2.out",
       scrollTrigger: {
-        trigger: ".dots", // Trigger when the dots container enters the viewport
-        start: "top bottom", // Start the animation when the top of the element hits the bottom of the viewport
-        end: "bottom top",   // End when the bottom of the element leaves the top of the viewport
-        once: true           // Only animate once
+        trigger: ".dots",
+        start: "top bottom",
+        end: "bottom top",
+        once: true
       }
     }
   );
 });
-
-
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -489,7 +384,7 @@ gsap.fromTo(".cmm-title",
     ease: "power2.out",
     scrollTrigger: {
       trigger: ".cmm-title",
-      toggleActions: "play none none none", // Only plays the animation on enter
+      toggleActions: "play none none none"
     }
   }
 );
@@ -508,7 +403,7 @@ gsap.fromTo(".cmm-alt",
     ease: "power2.out",
     scrollTrigger: {
       trigger: ".cmm-alt",
-      toggleActions: "play none none none", // Only plays the animation on enter
+      toggleActions: "play none none none"
     }
   }
 );
@@ -517,7 +412,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(".rigth-side-cmm",
   {
-    opacity: 0,
+    opacity: 0
   },
   {
     opacity: 1,
@@ -525,16 +420,10 @@ gsap.fromTo(".rigth-side-cmm",
     ease: "power2.out",
     scrollTrigger: {
       trigger: ".rigth-side-cmm",
-      toggleActions: "play none none none", // Only plays the animation on enter
+      toggleActions: "play none none none"
     }
   }
 );
-
-
-
-
-
-
 
 let customSlideIndex = 1;
 showCustomSlides(customSlideIndex);
@@ -563,13 +452,6 @@ function showCustomSlides(n) {
   dots[customSlideIndex - 1].className += " custom-actives";
 }
 
-
-
-
-
-
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(".tes-title",
@@ -583,16 +465,13 @@ gsap.fromTo(".tes-title",
     duration: 0.5,
     ease: "power2.out",
     scrollTrigger: {
-      trigger: ".tes-title", // Element that triggers the animation
-      start: "top bottom", // When the top of the element hits the bottom of the viewport
-      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
-      once: true           // Optional: animate only once
+      trigger: ".tes-title",
+      start: "top bottom",
+      end: "bottom top",
+      once: true
     }
   }
 );
-
-
-gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(".custom-slider-header-title",
   {
@@ -605,15 +484,13 @@ gsap.fromTo(".custom-slider-header-title",
     duration: 0.5,
     ease: "power2.out",
     scrollTrigger: {
-      trigger: ".custom-slider-header-title", // Element that triggers the animation
-      start: "top bottom", // When the top of the element hits the bottom of the viewport
-      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
-      once: true           // Optional: animate only once
+      trigger: ".custom-slider-header-title",
+      start: "top bottom",
+      end: "bottom top",
+      once: true
     }
   }
 );
-
-gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(".custom-slider-content",
   {
@@ -624,19 +501,17 @@ gsap.fromTo(".custom-slider-content",
     duration: 0.5,
     ease: "power2.out",
     scrollTrigger: {
-      trigger: ".custom-slider-content", // Element that triggers the animation
-      start: "top bottom", // When the top of the element hits the bottom of the viewport
-      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
-      once: true           // Optional: animate only once
+      trigger: ".custom-slider-content",
+      start: "top bottom",
+      end: "bottom top",
+      once: true
     }
   }
 );
 
-
-
 gsap.utils.toArray(".custom-dots .custom-dot").forEach((dot, index) => {
   gsap.fromTo(
-    dot, // Select each custom dot
+    dot,
     {
       opacity: 0,
       y: 50
@@ -645,24 +520,21 @@ gsap.utils.toArray(".custom-dots .custom-dot").forEach((dot, index) => {
       opacity: 1,
       y: 0,
       duration: 0.3,
-      delay: index * 0.1, // Stagger the animation for each dot
+      delay: index * 0.1,
       ease: "power2.out",
       scrollTrigger: {
-        trigger: ".custom-dots", // Trigger when the custom dots container enters the viewport
-        start: "top bottom", // Start the animation when the top of the element hits the bottom of the viewport
-        end: "bottom top",   // End when the bottom of the element leaves the top of the viewport
-        once: true           // Only animate once
+        trigger: ".custom-dots",
+        start: "top bottom",
+        end: "bottom top",
+        once: true
       }
     }
   );
 });
 
-
-
-// Target all .first-tes elements
 gsap.utils.toArray(".testies .first-tes").forEach((tes, index) => {
   gsap.fromTo(
-    tes, // Select each .first-tes container
+    tes,
     {
       opacity: 0,
       y: 50
@@ -670,28 +542,17 @@ gsap.utils.toArray(".testies .first-tes").forEach((tes, index) => {
     {
       opacity: 1,
       y: 0,
-      duration: 0.5, // Adjust duration as needed
-      delay: index * 0.2, // Stagger the animation for each .first-tes
+      duration: 0.5,
+      delay: index * 0.2,
       ease: "power2.out",
       scrollTrigger: {
-        trigger: ".testies", // Trigger when the .testies container enters the viewport
-        start: "top 80%", // Start the animation when the top of the element hits the bottom of the viewport   // End when the bottom of the element leaves the top of the viewport
-        once: true           // Only animate once
+        trigger: ".testies",
+        start: "top 80%",
+        once: true
       }
     }
   );
 });
-
-
-
-
-
-
-
-
-
-
-// script.js
 
 document.getElementById('toggle-switch').addEventListener('change', function () {
   if (this.checked) {
@@ -702,19 +563,6 @@ document.getElementById('toggle-switch').addEventListener('change', function () 
     document.getElementById('content-companies').classList.add('active');
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(".offer-title",
   {
@@ -727,16 +575,13 @@ gsap.fromTo(".offer-title",
     duration: 0.5,
     ease: "power2.out",
     scrollTrigger: {
-      trigger: ".offer-title", // Element that triggers the animation
-      start: "top bottom", // When the top of the element hits the bottom of the viewport
-      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
-      once: true           // Optional: animate only once
+      trigger: ".offer-title",
+      start: "top bottom",
+      end: "bottom top",
+      once: true
     }
   }
 );
-
-
-gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(".toggle-container",
   {
@@ -749,18 +594,13 @@ gsap.fromTo(".toggle-container",
     duration: 0.5,
     ease: "power2.out",
     scrollTrigger: {
-      trigger: ".toggle-container", // Element that triggers the animation
-      start: "top bottom", // When the top of the element hits the bottom of the viewport
-      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
-      once: true           // Optional: animate only once
+      trigger: ".toggle-container",
+      start: "top bottom",
+      end: "bottom top",
+      once: true
     }
   }
 );
-
-
-
-
-gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(".content",
   {
@@ -772,15 +612,10 @@ gsap.fromTo(".content",
     ease: "power2.out",
     scrollTrigger: {
       trigger: ".content",
-      toggleActions: "play none none none", // Only plays the animation on enter
+      toggleActions: "play none none none",
     }
   }
 );
-
-
-
-
-gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(".grid-offer",
   {
@@ -793,10 +628,141 @@ gsap.fromTo(".grid-offer",
     duration: 0.5,
     ease: "power2.out",
     scrollTrigger: {
-      trigger: ".grid-offer", // Element that triggers the animation
-      start: "top 130%", // When the top of the element hits the bottom of the viewport
-      end: "bottom top",   // When the bottom of the element hits the top of the viewport         // Optional: sync the animation with the scroll position
-      once: true           // Optional: animate only once
+      trigger: ".grid-offer",
+      start: "top 130%",
+      end: "bottom top",
+      once: true
     }
   }
 );
+
+gsap.fromTo(".news-title",
+  {
+    opacity: 0,
+    y: 50
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".news-title",
+      start: "top bottom",
+      end: "bottom top",
+      once: true
+    }
+  }
+);
+
+gsap.fromTo(".news-alt",
+  {
+    opacity: 0,
+    y: 50
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".news-alt",
+      start: "top bottom",
+      end: "bottom top",
+      once: true
+    }
+  }
+);
+
+gsap.fromTo(".name-text-news",
+  {
+    opacity: 0,
+    y: 50
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".name-text-news",
+      start: "top bottom",
+      end: "bottom top",
+      once: true
+    }
+  }
+);
+
+gsap.fromTo(".email-text-news",
+  {
+    opacity: 0,
+    y: 50
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".email-text-news",
+      start: "top bottom",
+      end: "bottom top",
+      once: true
+    }
+  }
+);
+
+gsap.fromTo(".footer-background-container",
+  {
+    opacity: 0,
+    y: 50
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".footer-background-container",
+      start: "top bottom",
+      end: "bottom top",
+      once: true
+    }
+  }
+);
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+
+    window.history.replaceState(null, null, ' ');
+  });
+});
+
+function scrollToSection(id) {
+  const targetElement = document.getElementById(id);
+
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+
+    setTimeout(() => {
+      window.history.replaceState(null, null, ' ');
+    }, 100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    const newImg = new Image();
+    newImg.src = img.src;
+  });
+});

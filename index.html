@@ -10,17 +10,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-
-
+  <meta name="theme-color" content="#5B8D6D">
 
   <style>
-    /* League Spartan font from google */
     @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Quicksand:wght@300..700&display=swap');
-    /* Quicksand font from google */
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
   </style>
-
-
 
   <link rel="preload" href="images/Icons/Manage full.png" as="image">
   <link rel="preload" href="images/Icons/Manage blank.png" as="image">
@@ -41,38 +36,39 @@
   <link rel="preload" href="images/Icons/Analyze full.png" as="image">
   <link rel="preload" href="images/Icons/Strat full.png" as="image">
 
+  <meta property="og:title" content="Sprout">
+  <meta property="og:image" content="https://sproutmarketing.xyz/images/og-logo.png">
+  <meta property="og:description" content="Crypto’s premium marketing agency for social media & GTM strategies">
+  <meta property="og:url" content="https://sproutmarketing.xyz/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sprout">
+  <meta name="twitter:description" content="Building supercharged communities for Web3">
+  <meta name="twitter:image" content="https://sproutmarketing.xyz/images/og-logo.png">
 </head>
 
 <body>
-
   <nav>
-    <div class="logo-nav" onclick="window.location.href='#'">
+    <a class="logo-nav" href="#section-hero">
       <div class="logo-container">
         <img src="images/Logo.svg" class="logo-img-nav">
       </div>
-    </div>
-
-
+    </a>
     <div class="nav-opt-container">
-      <a href="#">Home</a>
+      <a href="#section-hero">Home</a>
       <a href="#section-frm">Framework</a>
       <a href="#section-cmm">About us</a>
       <a href="#section-tes">Track record</a>
     </div>
-
-    <button class="nav-button" onclick="window.location.href='#offer'">
+    <button class="nav-button" onclick="scrollToSection('section-off')">
       <a class="nav-btn-text">Services</a>
     </button>
   </nav>
 
-
   <div class="mobile-nav">
-    <div class="logo-nav" onclick="window.location.href='#'">
+    <div class="logo-nav" href="#section-hero">
       <div class="logo-container">
-        <!-- <img src="images/Logo.svg" class="mobile-logo-img-nav"> -->
       </div>
     </div>
-
     <div class="mobile-x-container">
       <div class="top-line"></div>
       <div class="bottom-line"></div>
@@ -81,54 +77,47 @@
 
   <div class="mobile-opened-nav">
     <div class="button-container-mobile-nav">
-      <a href="#">Home</a>
+      <a href="#section-hero">Home</a>
       <a href="#phone-framework">Framework</a>
       <a href="#section-cmm">About us</a>
       <a href="#tes-mobile">Track record</a>
     </div>
-    <button class="nav-button-next" onclick="window.location.href='#offer'">
+    <button class="nav-button-next" onclick="scrollToSection('section-off')">
       <a class="nav-btn-text-next" style="color: rgb(0, 0, 0);">Services</a>
     </button>
   </div>
 
-
-
-
   <div id="section-hero">
     <div class="hero-section">
-
       <div class="hero-section-left-side">
         <div class="top-slogan-hero">
           <h3 id="quicksand" class="slogan-style-hero">There’s no need to grow alone</h3>
         </div>
-        <h1 id="spartan" class="hero-section-title">Crypto’s premium marketing agency for social media & GTM
-          strategies
+        <h1 id="spartan" class="hero-section-title">Crypto’s premium marketing agency for social media & GTM strategies
         </h1>
         <div class="hero-alt-section">
-          <h3 id="quicksand" class="hero-section-alt-text">We curate Web3’s greatest communities <img
-              src="images/favicon.png" class="sprout-little-img"></h3>
-
+          <h3 id="quicksand" class="hero-section-alt-text">We curate Web3’s greatest communities
+            <img src="images/favicon.png" class="sprout-little-img">
+          </h3>
         </div>
         <div class="hero-section-button-and-arrow">
           <div class="arrowas-container">
             <img src="images/arrow.svg" class="arrowas">
           </div>
-          <button class="hero-section-button" onclick="window.location.href='#offer'">
+          <button class="hero-section-button" onclick="scrollToSection('section-off')">
             <a class="hero-section-CTA">Start now</a>
           </button>
         </div>
       </div>
-
       <div class="hero-section-right-side">
-        <div class="image-container"><img src="images/hero-test-foto.png"></div>
+        <div class="image-container">
+          <img src="images/hero-test-foto.png">
+        </div>
       </div>
-
     </div>
-
     <div class="grid-hero">
       <img src="images/grid-white.png">
     </div>
-
   </div>
 
   <div class="logos">
@@ -136,59 +125,45 @@
       <a href="https://claystack.com/" target="_blank" class="slide-link">
         <img src="images/Logos/Claystack.png" class="slide-img" />
       </a>
-
       <a href="https://superverse.co/" target="_blank" class="slide-link">
         <img src="images/Logos/Superverse.png" class="slide-img" />
       </a>
-
       <a href="https://www.tastycrypto.com/" target="_blank" class="slide-link">
         <img src="images/Logos/Tastycrypto.png" class="slide-img" />
       </a>
-
       <a href="https://satoshitwenty.one/" target="_blank" class="slide-link">
         <img src="images/Logos/S21.png" class="slide-img" />
       </a>
-
       <a href="https://beamit.space/" target="_blank" class="slide-link">
         <img src="images/Logos/Beamitspace.png" class="slide-img" />
       </a>
-
       <a href="https://steadefi.com/" target="_blank" class="slide-link">
         <img src="images/Logos/Steadefi.png" class="slide-img" />
       </a>
-
       <a href="https://cscrow.com/" target="_blank" class="slide-link">
         <img src="images/Logos/Cscrow.png" class="slide-img" />
       </a>
-
       <a href="https://sub7.xyz/" target="_blank" class="slide-link">
         <img src="images/Logos/idk 1.png" class="slide-img" />
       </a>
-
       <a href="https://www.oldrocknft.com/" target="_blank" class="slide-link">
         <img src="images/Logos/Oldrock.png" class="slide-img" />
       </a>
-
       <a href="https://www.grimecoin.xyz/" target="_blank" class="slide-link">
         <img src="images/Logos/Grimecoin.png" class="slide-img" />
       </a>
-
       <a href="https://www.reverse-agency.ch/" target="_blank" class="slide-link">
         <img src="images/Logos/idk 2.png" class="slide-img" />
       </a>
-
       <a href="https://www.bridge23.app/" target="_blank" class="slide-link">
         <img src="images/Logos/Bridge 23.png" class="slide-img" />
       </a>
-
       <a href="https://www.greedp2e.com/" target="_blank" class="slide-link">
         <img src="images/Logos/Greed.png" class="slide-img" />
       </a>
-
       <a href="https://www.galaxydo.xyz/" target="_blank" class="slide-link">
         <img src="images/Logos/Galazy.png" class="slide-img" />
       </a>
-
     </div>
   </div>
 
@@ -197,58 +172,42 @@
     document.querySelector(".logos").appendChild(copy);
   </script>
 
-
-
-
-
-
-
-
-  <div id="section-frm">
+  <div id="section-frm" class="framework">
     <div class="framework-section">
-
       <div class="framework-title">
         <h1 id="spartan">Our framework</h1>
       </div>
-
       <div class="framework-buttons">
-
         <div class="frm-btn1 active" data-target="frm-img1">
           <div class="frm-btn-image-container1"></div>
           <div class="frm-btn-text">
             <h3 id="spartan" class="frm-btn-actual-text">Manage</h3>
           </div>
         </div>
-
         <div class="frm-btn2" data-target="frm-img2">
           <div class="frm-btn-image-container2"></div>
           <div class="frm-btn-text">
             <h3 id="spartan" class="frm-btn-actual-text">Engage</h3>
           </div>
         </div>
-
-        <!-- New Buttons -->
         <div class="frm-btn3" data-target="frm-img3">
           <div class="frm-btn-image-container3"></div>
           <div class="frm-btn-text">
             <h3 id="spartan" class="frm-btn-actual-text">Create</h3>
           </div>
         </div>
-
         <div class="frm-btn4" data-target="frm-img4">
           <div class="frm-btn-image-container4"></div>
           <div class="frm-btn-text">
             <h3 id="spartan" class="frm-btn-actual-text">Connect</h3>
           </div>
         </div>
-
         <div class="frm-btn5" data-target="frm-img5">
           <div class="frm-btn-image-container5"></div>
           <div class="frm-btn-text">
             <h3 id="spartan" class="frm-btn-actual-text">Analyze</h3>
           </div>
         </div>
-
         <div class="frm-btn6" data-target="frm-img6">
           <div class="frm-btn-image-container6"></div>
           <div class="frm-btn-text">
@@ -256,77 +215,54 @@
           </div>
         </div>
       </div>
-
       <div class="framework-desc-container">
         <div class="desc1" id="desc-text">
           <h2 id="quicksand">Focus on product, our in-house team handles all your marketing</h2>
         </div>
-
         <div class="desc2" id="desc-text">
           <h2 id="quicksand">Community is built through connection & conversation</h2>
         </div>
-
-        <!-- New Descriptions -->
         <div class="desc3" id="desc-text">
           <h2 id="quicksand">We create the best content for your Brand in Web3</h2>
         </div>
-
         <div class="desc4" id="desc-text">
           <h2 id="quicksand">Stay up to date through fast communication & weekly calls</h2>
         </div>
-
         <div class="desc5" id="desc-text">
           <h2 id="quicksand">Receive weekly & monthly performance reports</h2>
         </div>
-
         <div class="desc6" id="desc-text">
           <h2 id="quicksand">We approach every project with intensive market research</h2>
         </div>
       </div>
-
       <div class="frm-image-container">
         <div class="frm-img1" id="frm-img">
           <img src="images/Framework/Manage.png">
         </div>
-
         <div class="frm-img2" id="frm-img">
           <img src="images/Framework/Engage.png">
         </div>
-
-        <!-- New Images -->
         <div class="frm-img3" id="frm-img">
           <img src="images/Framework/Create.png">
         </div>
-
         <div class="frm-img4" id="frm-img">
           <img src="images/Framework/Connect.png">
         </div>
-
         <div class="frm-img5" id="frm-img">
           <img src="images/Framework/Analyze.png">
         </div>
-
         <div class="frm-img6" id="frm-img">
           <img src="images/Framework/Strategize.png">
         </div>
       </div>
-
     </div>
   </div>
 
-
-
-
-
-
   <div class="slider" id="phone-framework">
-
     <div class="phone-slider-header-title">
       <h1 id="spartan" class="hero-section-title">Our framework</h1>
     </div>
-
     <div class="slider-content">
-
       <div class="slide">
         <div class="top-row">
           <button class="prev" onclick="changeSlide(-1)">
@@ -338,7 +274,7 @@
           <div class="icon1"></div>
           <h2 class="title">Manage</h2>
         </div>
-        <p class="description">Focus on product, our in-house team<br> handles all your marketing</p>
+        <p class="description">Focus on product, our in-house team<br>handles all your marketing</p>
         <div class="image-placeholder">
           <img src="images/Framework/Manage.png">
         </div>
@@ -386,7 +322,7 @@
           <div class="icon4"></div>
           <h2 class="title">Connect</h2>
         </div>
-        <p class="description">Stay up to date through fast<br> communication & weekly calls</p>
+        <p class="description">Stay up to date through fast<br>communication & weekly calls</p>
         <div class="image-placeholder">
           <img src="images/Framework/Connect.png">
         </div>
@@ -402,7 +338,7 @@
           <div class="icon5"></div>
           <h2 class="title">Analyze</h2>
         </div>
-        <p class="description">Receive weekly & monthly<br> performance reports</p>
+        <p class="description">Receive weekly & monthly<br>performance reports</p>
         <div class="image-placeholder">
           <img src="images/Framework/Analyze.png">
         </div>
@@ -423,7 +359,6 @@
           <img src="images/Framework/Strategize.png">
         </div>
       </div>
-
     </div>
     <div class="dots">
       <span class="dot" onclick="currentSlide(1)"></span>
@@ -435,32 +370,22 @@
     </div>
   </div>
 
-
-
   <div id="section-cmm">
     <div class="cmm-bakcground-full">
-
       <div class="background-cmm">
-
         <div class="left-side-cmm">
-          <h1 id="spartan" class="cmm-title">We put your community<br> over everything</h1>
-          <h3 id="quicksand" class="cmm-alt">Through strategic content and deep<br> engagement, we build a brand
-            that<br>your
-            audience falls in
-            love with.</h3>
-          <button class="nav-button-cmm" onclick="window.location.href='#offer'">
+          <h1 id="spartan" class="cmm-title">We put your community<br>over everything</h1>
+          <h3 id="quicksand" class="cmm-alt">Through strategic content and deep<br>engagement, we build a brand<br>that
+            your audience falls in love with.</h3>
+          <button class="nav-button-cmm" onclick="scrollToSection('section-off')">
             <a class="nav-btn-text-cmm">Get started</a>
           </button>
         </div>
-
-
         <div class="rigth-side-cmm">
           <img src="images/cmm-img.png" class="cmm-image">
         </div>
-
       </div>
     </div>
-
   </div>
 
   <div id="section-tes">
@@ -468,84 +393,56 @@
       <div class="tes-title">
         <h1 id="spartan">What our clients say</h1>
       </div>
-
       <div class="testies">
-
         <div class="first-tes" id="tes-fill">
           <img src="images/pfp.png" class="tes-pfp">
           <h3 class="tes-text" id="quicksand">Sprout Marketing has been an absolute pleasure to work with. They are very
-            responsive to
-            our needs and have
-            a great understanding of the nuances of Web3 marketing with content creation and getting social engagement.
-          </h3>
+            responsive to our needs and have a great understanding of the nuances of Web3 marketing with content
+            creation and getting social engagement.</h3>
           <p class="tes-name" id="spartan">Jeff</p>
           <p class="tes-eta" id="spartan">Founder @ Steadefi</p>
-
         </div>
-
-
         <div class="first-tes" id="tes-fill">
           <img src="images/pfp 2.png" class="tes-pfp">
           <h3 class="tes-text" id="quicksand">Working with Sprout Marketing has been a game-changer for our brand! Their
             seamless communication, strategic adaptability, and high-quality content drove a 200% boost in our X
             audience and engagement, plus a 500% surge in impressions within just the first month. Their results speak
-            for themselves—truly outstanding!
-          </h3>
+            for themselves—truly outstanding!</h3>
           <p class="tes-name" id="spartan">Pryia</p>
           <p class="tes-eta" id="spartan">Operations @ tastycrypto</p>
-
         </div>
-
         <div class="first-tes" id="tes-fill">
           <img src="images/pfp 3.png" class="tes-pfp">
           <h3 class="tes-text" id="quicksand">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto atque
             officiis enim aliquam et id necessitatibus. Alias deleniti iure tenetur itaque, qui eaque molestias ut
             delectus quam quidem quisquam deserunt atque sapiente, nisi tempora inventore nemo fugiat, iste ducimus
-            odit.
-            iusto dicta.
-          </h3>
+            odit. iusto dicta.</h3>
           <p class="tes-name" id="spartan">Lorem</p>
           <p class="tes-eta" id="spartan">Lorem @ ipsum</p>
-
         </div>
-
-
-
-
       </div>
     </div>
   </div>
 
-
-
   <div class="custom-slider" id="tes-mobile">
-
-
     <div class="custom-slider-header-title">
       <h1 id="spartan" class="custom-hero-section-title">What clients say</h1>
     </div>
-
     <div class="custom-slider-content">
-
       <button class="custom-prev" onclick="changeCustomSlide(-1)">
         <img src="images/Left arrow.svg">
       </button>
       <button class="custom-next" onclick="changeCustomSlide(1)">
         <img src="images/Right arrow.svg">
       </button>
-
-
       <div class="custom-slide">
         <img src="images/pfp.png" class="tes-mob-pfp">
         <p id="quicksand" class="mob-tes-text">Sprout Marketing has been an absolute pleasure to work with. They are
-          very responsive to our
-          needs and have a great understanding of the nuances of Web3 marketing with content creation and getting social
-          engagement.</p>
+          very responsive to our needs and have a great understanding of the nuances of Web3 marketing with content
+          creation and getting social engagement.</p>
         <p class="tes-mob-name" id="spartan">Jeff</p>
         <p class="tes-mob-eta" id="spartan">Founder @ Steadefi</p>
       </div>
-
-
       <div class="custom-slide">
         <img src="images/pfp 2.png" class="tes-mob-pfp">
         <p id="quicksand" class="mob-tes-text">Working with Sprout Marketing has been a game-changer for our brand!
@@ -555,20 +452,15 @@
         <p class="tes-mob-name" id="spartan">Pryia</p>
         <p class="tes-mob-eta" id="spartan">Operations @ tastycrypto</p>
       </div>
-
       <div class="custom-slide">
         <img src="images/pfp 3.png" class="tes-mob-pfp">
         <p id="quicksand" class="mob-tes-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto atque
           officiis enim aliquam et id necessitatibus. Alias deleniti iure tenetur itaque, qui eaque molestias ut
-          delectus quam quidem quisquam deserunt atque sapiente, nisi tempora inventore nemo fugiat, iste ducimus
-          odit.
+          delectus quam quidem quisquam deserunt atque sapiente, nisi tempora inventore nemo fugiat, iste ducimus odit.
           iusto dicta.</p>
         <p class="tes-mob-name" id="spartan">Lorem</p>
         <p class="tes-mob-eta" id="spartan">Lorem @ ipsum</p>
       </div>
-
-
-
     </div>
     <div class="custom-dots">
       <span class="custom-dot" onclick="currentCustomSlide(1)"></span>
@@ -577,28 +469,16 @@
     </div>
   </div>
 
-
-
-
-
-
-
   <div id="section-off">
-
     <div class="offer-background">
-
       <div class="grid-offer">
         <img src="images/grid-green.png">
       </div>
-
       <div class="offer-container">
-
         <div class="offer-title">
           <h1 id="spartan" class="offer-title-text">Services</h1>
         </div>
-
         <div class="toggle-container">
-
           <div class="toggle">
             <input type="checkbox" id="toggle-switch">
             <label for="toggle-switch" class="toggle-label">
@@ -607,161 +487,101 @@
               <span class="toggle-background"></span>
             </label>
           </div>
-
         </div>
-
         <div id="content-companies" class="content active">
-
           <div class="offer-heading">
             <h1 id="spartan">Social Media Management</h1>
           </div>
-
           <div class="offer-text">
-            <h3 id="quicksand">Our classic service. Premium Web3 content for companies<br> that want peace of mind to
-              work
-              on what matters.
-              <br>We work directly in your team and bring A-class experience.
-            </h3>
+            <h3 id="quicksand">Our classic service. Premium Web3 content for companies<br>that want peace of mind to
+              work on what matters.<br>We work directly in your team and bring A-class experience.</h3>
           </div>
-
-          <div class="divider">
-          </div>
-
+          <div class="divider"></div>
           <div class="offer-below-title">
             <h2 id="spartan">Hassle Free</h2>
           </div>
-
           <div class="bulleted-list">
-
             <div class="first-two-items">
-
-
               <div class="first-item" id="bullet-item">
                 <div class="ball-item"></div>
                 <h3 id="quicksand" class="button-text">1-Week setup</h3>
               </div>
-
               <div class="second-item" id="bullet-item">
                 <div class="ball-item"></div>
                 <h3 id="quicksand" class="button-text">Full content curation</h3>
               </div>
-
             </div>
-
-
             <div class="last-two-items">
-
               <div class="third-item" id="bullet-item">
                 <div class="ball-item"></div>
                 <h3 id="quicksand" class="button-text">Weekly calls & reports</h3>
               </div>
-
               <div class="fourth-item" id="bullet-item">
                 <div class="ball-item"></div>
                 <h3 id="quicksand" class="button-text">Engagement & posting</h3>
               </div>
             </div>
-
           </div>
-
           <button class="service-section-button" onclick="window.location.href='#offer'">
             <a class="service-section-CTA">Book a call to start</a>
           </button>
-
-
         </div>
-
-
-
-
-
-
-
         <div id="content-founders" class="content">
-
           <div class="offer-heading">
             <h1 id="spartan">Personal Branding</h1>
           </div>
-
           <div class="offer-text">
-            <h3 id="quicksand">We launch high-leverage personal brands for top tech founders.<br>
-              Guaranteed 0 -> 40+ likes on average in 60 days or a full refund.
-            </h3>
+            <h3 id="quicksand">We launch high-leverage personal brands for top tech founders.<br>Guaranteed 0 -> 40+
+              likes on average in 60 days or a full refund.</h3>
           </div>
-
-          <div class="divider">
-          </div>
-
+          <div class="divider"></div>
           <div class="offer-below-title">
             <h2 id="spartan">What’s Inside</h2>
           </div>
-
           <div class="bulleted-list">
-
             <div class="first-two-items">
-
-
               <div class="first-item" id="bullet-item">
                 <div class="ball-item"></div>
                 <h3 id="quicksand" class="button-text">Branding optimization</h3>
               </div>
-
               <div class="second-item" id="bullet-item">
                 <div class="ball-item"></div>
-                <h3 id="quicksand" class="button-text">Content strategy </h3>
+                <h3 id="quicksand" class="button-text">Content strategy</h3>
               </div>
-
             </div>
-
-
             <div class="last-two-items">
-
               <div class="third-item" id="bullet-item">
                 <div class="ball-item"></div>
                 <h3 id="quicksand" class="button-text">Management & Engagement</h3>
               </div>
-
               <div class="fourth-item" id="bullet-item">
                 <div class="ball-item"></div>
-                <h3 id="quicksand" class="button-text">Growth or refund guaranteed </h3>
+                <h3 id="quicksand" class="button-text">Growth or refund guaranteed</h3>
               </div>
             </div>
-
           </div>
-
           <button class="service-section-button" onclick="window.location.href='#offer'">
             <a class="service-section-CTA">Inquire Now</a>
           </button>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
-
-
 
   <div id="section-news">
     <div class="newsletter-container">
-
       <div class="news-title">
         <h1 id="spartan">Join 5000+ readers on The Harvest</h1>
       </div>
-
       <div class="news-alt">
         <h3 id="quicksand">A easy-to-skim market recap in your inbox weekly</h3>
       </div>
-
       <form id="subscriptionForm">
-
         <div class="name-text-news">
           <h2 id="spartan" class="news-top-desc">Name</h2>
           <input type="text" id="name" name="name" placeholder="Name">
         </div>
-
-        <div class=" email-text-news">
+        <div class="email-text-news">
           <h2 id="spartan" class="news-top-desc">Email</h2>
           <input type="email" id="email" name="email" placeholder="Email">
         </div>
@@ -770,131 +590,116 @@
             <p class="news-section-CTA">Subscribe</p>
           </button>
         </div>
-
       </form>
-
-
     </div>
   </div>
-
 
   <div id="section-foot">
     <div class="footer-background-container">
-
       <div class="about-sprout-footer-container">
         <img src="images/Logo.svg" class="foot-logo">
-        <h3 id="quicksand">Premium content for trail-blazing Crypto companies</h3>
-        <button class="service-section-button" onclick="window.location.href='#offer'">
+        <h3 id="quicksand" class="foot-log-text">Premium content<br>for trail-blazing<br>Crypto companies</h3>
+        <button class="service-section-button" onclick="scrollToSection('section-off')">
           <a class="service-section-CTA">Book a call</a>
         </button>
       </div>
-
       <div class="nav-aweb-container">
         <div class="nav-item-container">
-
-
           <div class="nav-table-container">
             <h2 id="spartan" class="little-table-cont">Browse</h2>
-            <a href="#">Home</a>
-            <a href="#section-frm">Framework</a>
-            <a href="#section-cmm">About us</a>
-            <a href="#section-tes">Track record</a>
+            <div class="foot-nav-links-cont">
+              <a href="#section-hero" id="quicksand">Home</a>
+              <a href="#section-frm" id="quicksand">Framework</a>
+              <a href="#section-cmm" id="quicksand">About us</a>
+              <a href="#section-tes" id="quicksand">Track record</a>
+            </div>
           </div>
-
-
-
           <div class="nav-table-container">
             <h2 id="spartan" class="little-table-cont">Services</h2>
-            <a href="#">Management</a>
-            <a href="#">Marketing</a>
-            <a href="#">Newsletter</a>
+            <div class="foot-nav-links-cont">
+              <a href="#offer" id="quicksand">Management</a>
+              <a href="#offer" id="quicksand">Marketing</a>
+              <a href="#newsletter" id="quicksand">Newsletter</a>
+            </div>
           </div>
-
           <div class="nav-table-container">
             <h2 id="spartan" class="little-table-cont">Accelerators</h2>
-            <a href="#">X Accelerator</a>
-            <a href="#">30-30 Accelerator</a>
+            <div class="foot-nav-links-cont">
+              <a href="https://sproutmarketing.xyz/xaccelerator" id="quicksand">X Accelerator</a>
+              <a href="https://sproutmarketing.xyz/30accelerator" id="quicksand">30-30 Accelerator</a>
+            </div>
           </div>
-
           <div class="nav-table-container">
             <h2 id="spartan" class="little-table-cont">Contacts</h2>
-            <a href="#">X (Twitter)</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Email</a>
+            <div class="foot-nav-links-cont">
+              <a href="#" id="quicksand">X (Twitter)</a>
+              <a href="#" id="quicksand">LinkedIn</a>
+              <a href="#" id="quicksand">Email</a>
+            </div>
           </div>
-
-
-
-
         </div>
-
-
         <div class="aweb-container">
           <p id="quicksand">© 2024 Sprout. All rights reserved.</p>
-          <div class="aweb-container-text">
-            <p id="quicksand">Website Made By</p>
+          <a href="https://augustas.co/" class="aweb-container-text">
+            <p id="quicksand" class="aweb-text">Website Made By</p>
             <img src="images/AWeb.svg" class="aweb-image">
-          </div>
+          </a>
         </div>
-
-
       </div>
-
     </div>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="spacer" style="height: 300vh;"></div>
-
-
-
-
-
+  <div class="phone-nav-container-background">
+    <div class="foot-nav-title">
+      <div class="first-foot-half">
+        <div class="nav-table-container">
+          <h2 id="spartan" class="little-table-cont">Browse</h2>
+          <div class="foot-nav-links-cont">
+            <a href="#section-hero" id="quicksand">Home</a>
+            <a href="#section-frm" id="quicksand">Framework</a>
+            <a href="#section-cmm" id="quicksand">About us</a>
+            <a href="#section-tes" id="quicksand">Track record</a>
+          </div>
+        </div>
+        <div class="nav-table-container">
+          <h2 id="spartan" class="little-table-cont">Services</h2>
+          <div class="foot-nav-links-cont">
+            <a href="#offer" id="quicksand">Management</a>
+            <a href="#offer" id="quicksand">Marketing</a>
+            <a href="#newsletter" id="quicksand">Newsletter</a>
+          </div>
+        </div>
+      </div>
+      <div class="second-foot-half">
+        <div class="nav-table-container">
+          <h2 id="spartan" class="little-table-cont">Accelerators</h2>
+          <div class="foot-nav-links-cont">
+            <a href="https://sproutmarketing.xyz/xaccelerator" id="quicksand">X Accelerator</a>
+            <a href="https://sproutmarketing.xyz/30accelerator" id="quicksand">30-30 Accelerator</a>
+          </div>
+        </div>
+        <div class="nav-table-container">
+          <h2 id="spartan" class="little-table-cont">Contacts</h2>
+          <div class="foot-nav-links-cont">
+            <a href="#" id="quicksand">X (Twitter)</a>
+            <a href="#" id="quicksand">LinkedIn</a>
+            <a href="#" id="quicksand">Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aweb-container">
+      <p id="quicksand">© 2024 Sprout. All rights reserved.</p>
+      <a href="https://augustas.co/" class="aweb-container-text">
+        <p id="quicksand" class="aweb-text">Website Made By</p>
+        <img src="images/AWeb.svg" class="aweb-image">
+      </a>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 
   <script>
-    gsap.from(".title51", {
-      scrollTrigger: {
-        trigger: ".title51",
-        toggleActions: "restart none restart reverse"
-      },
-      yPercent: 100,
-      duration: 0.4,
-      ease: "cubic-bezier(0.770, 0.000, 0.175, 1.000)",
-      stagger: 0.2,
-    });
-
     document.getElementById("subscriptionForm").addEventListener("submit", function (event) {
       event.preventDefault();
 
@@ -966,7 +771,8 @@
 
     document.getElementById("subsribe-hover-on").addEventListener("mouseleave", () => {
       gsap.to(timelinerasas, { duration: 0.5, timeScale: 1 });
-    });</script>
+    });
+  </script>
 
 </body>
 
