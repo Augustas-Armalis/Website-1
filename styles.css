@@ -349,6 +349,7 @@ nav.visible {
   display: flex;
   align-items: center;
   justify-content: start;
+  padding-top: 36px;
 }
 
 .image-container {

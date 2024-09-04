@@ -425,6 +425,45 @@ gsap.fromTo(".rigth-side-cmm",
   }
 );
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let customSlideIndex = 1;
 showCustomSlides(customSlideIndex);
 
