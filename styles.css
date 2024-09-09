@@ -370,7 +370,8 @@ nav.visible {
 
 .top-slogan-hero {
   border-radius: 9999px;
-  background: linear-gradient(91deg, #1A281F 1.09%, #5C8E6E 100%);
+  background: linear-gradient(91deg, #151917 1.09%, #5C8E6E 100%);
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
   width: fit-content;
   min-height: 45px;
   height: fit-content;
@@ -460,7 +461,7 @@ nav.visible {
   height: fit-content;
   padding-top: 24px;
   padding-bottom: 24px;
-  background: linear-gradient(180deg, #1A281F 50%, #5C8E6E 123.81%);
+  background: linear-gradient(180deg, #5C8E6E -30.56%, #151917 63.89%);
   box-shadow: 0px 4px 40px 5px rgba(0, 0, 0, 0.30);
   white-space: nowrap;
   position: relative;
@@ -479,12 +480,12 @@ nav.visible {
 
 .logos:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), #223328);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #151917);
 }
 
 .logos:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), #223328);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #151917);
 }
 
 .logos-slide {
@@ -856,7 +857,7 @@ nav.visible {
 }
 
 .cmm-bakcground-full {
-  background: linear-gradient(180deg, #1A281F 50%, #5C8E6E 125.15%);
+  background: linear-gradient(180deg, #151917 50%, #5C8E6E 171.41%);
   box-shadow: 0px 27px 81.1px -3px rgba(0, 0, 0, 0.28);
   width: 100vw;
   align-items: center;
@@ -1138,7 +1139,7 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
 
 
 .offer-background {
-  background: #1A281F;
+  background: #151917;
   box-shadow: 0px 14px 26.5px 0px rgba(0, 0, 0, 0.25);
   width: 100vw;
   align-items: center;
@@ -1290,7 +1291,7 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
 .footer-background-container {
   width: fit-content;
   border-radius: 20px 20px 0px 0px;
-  background: linear-gradient(180deg, #1A281F 50%, #5C8E6E 125.15%);
+  background: linear-gradient(180deg, #151917 50%, #5C8E6E 125.15%);
   box-shadow: 0px 27px 81.1px -3px rgba(0, 0, 0, 0.28);
   display: flex;
   padding-left: 32px;
@@ -1450,7 +1451,8 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
 
   .phone-nav-container-background {
     border-radius: 20px 20px 0px 0px;
-    background: linear-gradient(180deg, #1A281F 50%, #5C8E6E 125.15%);
+    background: linear-gradient(180deg, #151917 50%, #5C8E6E 125.15%);
+
     box-shadow: 0px 27px 81.1px -3px rgba(0, 0, 0, 0.28);
     height: fit-content;
     width: 100vw;
@@ -1743,7 +1745,7 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
     height: 100%;
     width: 100vw;
     position: fixed;
-    background: #1A281F;
+    background: #151917;
     box-shadow: 0px 4px 40px 5px rgba(0, 0, 0, 0.30);
 
 
@@ -2555,8 +2557,8 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
   }
 
   .cmm-bakcground-full {
-    background: linear-gradient(180deg, #1A281F 50%, #5C8E6E 125.15%);
-    box-shadow: 0px 10px 30px -1px rgba(0, 0, 0, 0.28);
+    background: linear-gradient(180deg, #151917 50%, #5C8E6E 171.41%);
+    box-shadow: 0px 27px 81.1px -3px rgba(0, 0, 0, 0.28);
     width: 100vw;
     align-items: center;
     display: flex;
