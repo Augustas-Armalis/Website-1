@@ -1382,14 +1382,12 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
   justify-content: space-between;
 }
 
-.aweb-container-text {
-  display: flex;
-  align-items: center;
-  margin-right: 32px;
-  gap: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-}
+
+
+
+
+
+
 
 .aweb-image {
   height: 20px;
@@ -1400,7 +1398,9 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
   font-weight: 700;
 }
 
-
+.aweb-container-text p{
+  color: white;
+}
 
 
 
@@ -1508,11 +1508,12 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
   }
 
   .aweb-container-text {
-    margin-right: 0px;
+    margin-right: 8px;
     margin-bottom: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap:8px;
   }
 
   .aweb-image {
@@ -2407,6 +2408,7 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
   }
 
   .offer-container {
+    background: #151917;
     width: 1000px;
     display: flex;
     flex-direction: column;

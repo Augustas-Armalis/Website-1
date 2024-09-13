@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ease: 'ease-out',
       scrollTrigger: {
         trigger: element,
-        start: 'top 80%',
+        start: 'top 100%',
         toggleActions: 'play none none none'
       }
     });
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
     stagger: 0.15,
     scrollTrigger: {
       trigger: '.not-only-one-first-point, .not-only-one-second-point, .not-only-one-third-point',
-      start: 'top 80%',
+      start: 'top 100%',
       toggleActions: 'play none none none'
     }
   });
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
     stagger: 0.15,
     scrollTrigger: {
       trigger: '.expectations-first-point, .expectations-second-point, .expectations-third-point',
-      start: 'top 80%',
+      start: 'top 100%',
       toggleActions: 'play none none none'
     }
   });
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
     stagger: 0.15,
     scrollTrigger: {
       trigger: '.offer-text-side-container, .offer-image-side-container',
-      start: 'top 80%',
+      start: 'top 100%',
       toggleActions: 'play none none none'
     }
   });
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function () {
     stagger: 0.15,
     scrollTrigger: {
       trigger: '#quest1, #quest2, #quest3, #quest4',
-      start: 'top 80%',
+      start: 'top 100%',
       toggleActions: 'play none none none'
     }
   });
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ease: 'ease-out',
     scrollTrigger: {
       trigger: '.hero-section-right-side',
-      start: 'top 80%',
+      start: 'top 100%',
       toggleActions: 'play none none none'
     }
   });

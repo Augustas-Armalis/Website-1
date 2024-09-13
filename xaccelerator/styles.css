@@ -195,6 +195,7 @@ h3 {
 .hero-section-title {
   color: white;
   margin-bottom: 32px;
+  font-size: 54px;
 }
 
 .hero-section-alt-text {
@@ -433,14 +434,14 @@ h3 {
   max-width: 1200px;
   height: fit-content;
   border-radius: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.80);
+  border: 1px solid rgba(255, 255, 255, 0.80);
   background: rgba(255, 255, 255, 0.30);
   box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25) inset, 0px 0px 60px 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(9px);
   display: flex;
   justify-content: center;
   align-items: stretch;
-  padding: 32px;
+  padding: 42px;
   gap: 64px;
   margin-top: 128px;
   margin-bottom: 128px;
@@ -653,7 +654,7 @@ h3 {
 .video-sectio-alt {
   color: #9AC63E;
   font-weight: 500;
-  margin-bottom: 32px;
+  margin-bottom: 92px;
 }
 
 .video {
@@ -867,6 +868,7 @@ h3 {
 .expectations-points-section {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 92px;
 }
 
 .expectations-point-title {
@@ -988,7 +990,7 @@ h3 {
   box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(9px);
   height: fit-content;
-  flex: 1.6;
+  flex: 1.2;
   padding: 32px
 }
 
@@ -1043,7 +1045,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 32px;
+  margin-top: 64px;
 }
 
 .offer-spots-container {
@@ -1158,15 +1160,17 @@ h3 {
 .question button {
   width: 100%;
   border-radius: 20px;
+  border: 2px solid var(--accelerator-glass-bord, rgba(255, 255, 255, 0.80));
   background: rgba(255, 255, 255, 0.30);
-  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  
+  /* glass accelerator eff */
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25) inset, 0px 0px 60px 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(9px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 16px;
-  border: none;
-  outline: none;
+
   font-size: 22px;
   color: #fff;
   font-weight: 700;
@@ -1176,7 +1180,7 @@ h3 {
 
 
 .question button:hover {
-  background: rgba(138, 138, 138, 0.3);
+  background: rgba(170, 170, 170, 0.3);
 }
 
 .question p {
@@ -1190,6 +1194,7 @@ h3 {
   padding-left: 32px;
   padding-right: 32px;
   font-weight: 700;
+  line-height: 90%;
 }
 
 .d-arrow {
@@ -1212,6 +1217,7 @@ h3 {
   font-family: Quicksand;
   font-size: 24px;
   font-weight: 700;
+  line-height: 130%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -1235,6 +1241,8 @@ h3 {
 
 .question-name {
   margin-left: 16px;
+  line-height: 90%;
+  padding-top: 5px;
 }
 
 
@@ -1243,7 +1251,7 @@ h3 {
 
 
 footer {
-  background-color: #F1EFE7;
+  background-color: #051a0f;
   height: 30px;
   display: flex;
   align-items: center;
@@ -1253,9 +1261,12 @@ footer {
 
 .footer-text {
   font-size: 16px;
+  color: white;
 }
 
-
+.button-container-news{
+  margin-bottom: 128px;
+}
 
 
 .border-too-big-glow {
@@ -1274,6 +1285,188 @@ footer {
 
 
 
+
+
+
+
+
+
+
+
+.newsletter-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.news-title {
+  margin-top: 128px;
+}
+
+.news-alt {
+  margin-bottom: 64px;
+}
+
+.news-alt h3 {
+  color: #747474;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: normal;
+  margin-top: 16px;
+}
+
+
+.news-top-desc {
+  color: #436851;
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 24px;
+}
+
+#name,
+#email {
+  width: 900px;
+  height: fit-content;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.30);
+  box-shadow: 0px 11px 28.1px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(9px);
+  border: none;
+  font-size: 24px;
+  font-family: "Quicksand";
+  font-weight: 700;
+  margin-bottom: 36px;
+  margin-top: 16px;
+}
+
+.button-container-news {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.service-section-button,
+.sub-button {
+  width: fit-content;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 52px;
+  background: #09381F;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.15s;
+}
+
+.service-section-button:hover,
+.sub-button:hover {
+  background: #051a0f;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.service-section-CTA,
+.news-section-CTA {
+  color: #ffffff;
+  font-family: "League Spartan";
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 32px;
+  margin-right: 32px;
+  padding-top: 5px;
+}
+
+#section-news{
+  background-color: #F1EFE7;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+  background-color: #051a0f;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 32px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+
+
+
+
+
+.aweb-container {
+  width: 100%;
+  display: flex;
+  border-radius: 20px 20px 0px 0px;
+  background: rgba(255, 255, 255, 0.30);
+  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(9px);
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.aweb-container p {
+  margin-left: 32px;
+  color: #FFF;
+  line-height: normal;
+  font-size: 20px;
+}
+
+.nav-aweb-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.aweb-container-text {
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.aweb-image  {
+  height: 15px;
+}
+
+
+
+.aweb-container-text:hover {
+  scale: 1.05;
+  font-weight: 700;
+}
+
+.aweb-text{
+  color: white;
+}
 
 
 
@@ -1418,6 +1611,89 @@ footer {
 
 @media (max-width: 599px) {
 
+
+
+
+
+  .newsletter-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 24px;
+    margin-left: 24px;
+    text-align: center;
+  }
+
+  .news-title {
+    margin-top: 92px;
+    margin-bottom: 32px;
+  }
+
+  .news-title h1 {
+    line-height: 130%;
+  }
+
+  .news-alt {
+    display: none;
+  }
+
+
+
+  .news-top-desc {
+    color: #436851;
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 16px;
+    text-align: start;
+  }
+
+  #subscriptionForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #name,
+  #email {
+    width: 80vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: -16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0px 11px 28.1px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(9px);
+    border: none;
+    font-size: 20px;
+    font-family: "Quicksand";
+    font-weight: 700;
+    margin-bottom: 36px;
+    margin-top: 16px;
+  }
+
+  .button-container-news {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
   .hero-section-button-and-arrow {
     display: flex;
     align-items: center;
@@ -1455,7 +1731,10 @@ footer {
   }
 
 
-
+#expectations-image-container{
+  height: 80px;
+  width: 80px;
+}
 
   /* Hero section */
 
@@ -1470,6 +1749,7 @@ footer {
 
   .hero-section-title {
     text-align: center;
+    font-size: 40px;
   }
 
   .hero-section-alt-text {
@@ -1522,13 +1802,13 @@ footer {
 
   .not-only-one-button {
     width: fit-content;
-    height: 45px;
+    height: 40px;
     padding-left: 32px;
     padding-right: 32px;
   }
 
   .not-only-one-button-text {
-    font-size: 28px;
+    font-size: 24px;
   }
 
 
@@ -1547,7 +1827,7 @@ footer {
   }
 
   .coach-section-CTA {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .coach-section-button-container {
@@ -1557,22 +1837,30 @@ footer {
     width: 100%;
   }
 
+  .coach-section-button{
+    height: 40px;
+  }
+
   .coach-section-text-alt {
     margin-bottom: 16px;
   }
 
 
-
+.thirty-button-container{
+align-items: center;
+justify-content: center;
+display: flex;
+}
 
   /* 30 section */
 
   .thirty-button {
     width: fit-content;
-    height: 45px;
+    height: 40px;
   }
 
   .thirty-button-text {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .thirty-section {
@@ -1593,7 +1881,9 @@ footer {
     margin-bottom: 32px;
   }
 
-
+.news-section-CTA{
+  font-size: 24px;
+}
 
   /* video section */
 
@@ -1602,7 +1892,7 @@ footer {
   }
 
   .video-sectio-alt {
-    margin-bottom: 16px;
+    margin-bottom: 64px;
   }
 
 
@@ -1619,6 +1909,11 @@ footer {
     width: fit-content;
     margin-left: 32px;
     margin-right: 32px;
+    margin-bottom: 128px;
+  }
+
+  .expectations-third-point{
+    margin-bottom: 16px;
   }
 
   .expectations-button {
@@ -1659,6 +1954,14 @@ footer {
   .offer-text-title,
   .offer-text-alt {
     text-align: center;
+  }
+
+  .offer-text-title{
+    font-size: 36px;
+    background: linear-gradient(90deg, #1A281F 0%, #5C8E6E 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
   }
 
   .offer-price-container {
@@ -1716,7 +2019,11 @@ footer {
   }
 
   .question button {
-    padding: 6px 6px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 15px;
+    border-width: 1px;
   }
 
   .question p.show {
@@ -1734,16 +2041,34 @@ footer {
 
   }
 
+  .expectations-first-point,
+  .expectations-second-point,
+  .expectations-third-point{
+border-width: 1px;
+  }
+
+  .expectations-image-container{
+    border-width: 1px;
+  }
 
 
+.button-container-news{
+  margin-bottom: 92px;
+}
 
   footer {
-    background-color: #F1EFE7;
-    height: 30px;
+    background-color: #051a0f;
+    height: fit-content;
     display: flex;
     align-items: center;
-    padding: 4px;
     justify-content: center;
+    flex-direction: column;
+    padding: 16px;
+    gap:16px;
+  }
+
+  .aweb-container-text{
+    margin-right: 0px;
   }
 
 }

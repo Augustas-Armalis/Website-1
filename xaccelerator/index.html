@@ -299,7 +299,12 @@
                 </div>
 
             </div>
-
+            
+            <div class="coach-section-button-container">
+                <button class="coach-section-button" onclick="window.location.href='#offer'">
+                    <a class="coach-section-CTA">Join right below</a>
+                </button>
+            </div>
 
         </div>
     </div>
@@ -366,10 +371,10 @@
 
             <div class="question" id="quest1">
                 <button>
-                    <h2 id="spartan" class="question-name">How do I know if this will work or not?</h2>
+                    <h2 id="spartan" class="question-name">Will this work for me?</h2>
                     <i class="fas fa-chevron-down d-arrow"></i>
                 </button>
-                <p id="quicksand">Because it has been tested with multiple brands, in multiple niches, both corporate
+                <p id="quicksand">Yes it will! It has been tested with multiple brands, in multiple niches, both corporate
                     and personal. This strategy FORCES you to grow, literally. Only thing you need to do is implement
                     it.</p>
             </div>
@@ -406,22 +411,124 @@
         </div>
     </section>
 
-
+    <div id="section-news">
+        <div class="newsletter-container">
+          <div class="news-title">
+            <h1 id="spartan">Join 5000+ readers on The Harvest</h1>
+          </div>
+          <div class="news-alt">
+            <h3 id="quicksand">A easy-to-skim market recap in your inbox weekly</h3>
+          </div>
+          <form id="subscriptionForm">
+            <div class="name-text-news">
+              <h2 id="spartan" class="news-top-desc">Name</h2>
+              <input type="text" id="name" name="name" placeholder="Name">
+            </div>
+            <div class="email-text-news">
+              <h2 id="spartan" class="news-top-desc">Email</h2>
+              <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="button-container-news">
+              <button type="submit" class="sub-button">
+                <p class="news-section-CTA">Subscribe</p>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
 
     <footer>
         <p id="spartan" class="footer-text">© 2024 Sprout. All rights reserved.</p>
+
+            <a href="https://augustas.co/" class="aweb-container-text">
+              <p id="quicksand" class="aweb-text">Website Made By</p>
+              <img src="images/AWeb.svg" class="aweb-image">
+            </a>
+
     </footer>
 
 
 
 
 
-    <!-- 
-    <p id="dynamicText"></p>
-    <button><a ></a></button> -->
-
 
     <script src="values.js"></script>
+
+
+    <script>
+        document.getElementById("subscriptionForm").addEventListener("submit", function (event) {
+          event.preventDefault();
+    
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const apiKey = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiOWZjMjYxYmFjZmZjN2RjMzExNTkyZDM4OWRmMjQ1MGMyZGJjNTczOTJiNWIzY2RkMTk0ODA5YTJjOTA5MGUyNGM0ZDdkNDU1NzhiMTUxMzMiLCJpYXQiOjE3MjQ2ODEwNTQuMjg2MjI2LCJuYmYiOjE3MjQ2ODEwNTQuMjg2MjI5LCJleHAiOjQ4ODAzNTQ2NTQuMjgzMTEzLCJzdWIiOiIxMDU0MDMxIiwic2NvcGVzIjpbXX0.cnCv3cGgdbVP1R77wIkN3gVjkgdNSosoi3zEitmW5t18iL8rWFMQhcUAlxpd4QdSgxFYJcHfuoB2P32abwkCQ-wi75Xu4CclI03gypPxgzN4--6_XTtm5PCvMeDcE17ISbFpt71g7Kk3djpJtN5OI7GqmdBUgJr5d0WoBicYGLVcjdiBHHFdhZFPUYlkNLFdwXAQv-VnSUPWJAw6WVP1E2d7ITsZ42IAe3as81XKMpQL8NReHqdbnfsaMYkv6Wk877zTWd_eZ743ZXoclOKzTwGgnN_ypzrli_tlBFapZYBRAxvLA7-mE8HQxvFVYj9trRpIvZnE5CmlKUeMdycLELZCFk02neFxS4kxJGHCWEKpZaUjM8-4Pfs6jP35S2zhBleKQ3D-SY0OZxme6wsQXZv5JFvzQX_FUTOfxZa8EPyYRuWfxz_hdowHkfuB7CyoWPqE81bp7leJUABOIFQAKwDpQU7XJLqrm12HnfytQgNV8ChvDclnGafUG-eqreQEFdvnRMhHji5ThWF-ueDjhz4Ksa0EjbyTXXOhx-tVe-b8A0KZT1m_nm49j9IpCh2QVRcTRSDE9a_9S7_HZ3V57Ouwnu-XEE8R5MStWtLT2SliU5BJX0X3xY5-QuxveI-ohUfc3iq1W4PZXBX1ROo1mPbjfnr4ndYN7bt93o_DDrM";
+    
+          fetch('https://connect.mailerlite.com/api/groups?filter[name]=Newsletter', {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              'Authorization': `Bearer ${apiKey}`
+            }
+          })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Failed to retrieve group information');
+              }
+              return response.json();
+            })
+            .then(data => {
+              const groupId = data.data[0].id;
+    
+              fetch('https://connect.mailerlite.com/api/subscribers', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json',
+                  'Authorization': `Bearer ${apiKey}`
+                },
+                body: JSON.stringify({
+                  email: email,
+                  fields: {
+                    name: name
+                  },
+                  groups: [groupId]
+                })
+              })
+                .then(response => {
+                  if (!response.ok) {
+                    throw new Error('Subscription failed');
+                  }
+                  console.log('Subscription successful');
+    
+                  alert('Thank you! Your subscription was successful.');
+                })
+                .catch(error => {
+                  console.error('Error:', error);
+                  alert('Subscription failed');
+                });
+            })
+            .catch(error => {
+              console.error('Error:', error);
+              alert('Failed to retrieve group information');
+            });
+        });
+    
+        const timelinerasas = gsap.to(".star-absolute-free3", {
+          rotation: 360,
+          duration: 10,
+          ease: "none",
+          repeat: -1,
+        });
+    
+        document.getElementById("subsribe-hover-on").addEventListener("mouseenter", () => {
+          gsap.to(timelinerasas, { duration: 0.5, timeScale: 5 });
+        });
+    
+        document.getElementById("subsribe-hover-on").addEventListener("mouseleave", () => {
+          gsap.to(timelinerasas, { duration: 0.5, timeScale: 1 });
+        });
+      </script>
 
 </body>
 
