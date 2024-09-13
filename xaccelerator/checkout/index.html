@@ -29,9 +29,12 @@
 
     <div class="first-card-container">
       <p id="quicksand" class="little-text">Crypto</p>
-      <button class="first-button" onclick="window.location.href='#'">
+      <button class="second-button" onclick="window.location.href='https://app.hel.io/pay/66a0670e6b8d7a9d6116bb25'" style="margin-bottom: 36px;">
+        <!--  HELIO LINK -->
         <div class="button-container-helio">
-          <div id="helioCheckoutContainer"></div>
+          <div id="helioCheckoutContainer">
+            <a class="button-text" id="spartan">Pay with HELIO</a>
+          </div>
         </div>
       </button>
       <p id="quicksand" class="little-text">Fiat</p>
@@ -39,7 +42,7 @@
         <!--  STRIPE LINK -->
         <div class="button-container-helio">
           <div id="helioCheckoutContainer">
-            <a class="button-text">PAY WITH STRIPE</a>
+            <a class="button-text" id="spartan">Pay with STRIPE</a>
           </div>
         </div>
       </button>
@@ -48,38 +51,6 @@
 
   </div>
 
-
-  <script type="module" crossorigin src="https://embed.hel.io/assets/index-v1.js"></script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      window.helioCheckout(
-        document.getElementById("helioCheckoutContainer"),
-        {
-          paylinkId: "66a0670e6b8d7a9d6116bb25",
-          theme: { "colors": { "primaryButtonBackground": "#92b93c", "primaryButtonText": "#F1EFE7" } },
-          display: "button",
-          onSuccess: event => console.log(event),
-          onError: event => console.log(event),
-          onPending: event => console.log(event),
-          onCancel: () => console.log("Cancelled payment"),
-          onStartPayment: () => console.log("Starting payment"),
-        }
-      );
-    });
-  </script>
-
-  <style>
-    .button-container-helio {
-      width: 100%;
-      border-radius: 999px;
-      overflow: hidden;
-      /* height: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: center; */
-    }
-  </style>
 
 
 

@@ -3,7 +3,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+html{
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -51,11 +61,6 @@ a:active {
   background-color: rgba(150, 150, 150, 0.2);
 }
 
-body {
-  background-color: #070D09;
-  overflow-x: hidden;
-  width: 100vw;
-}
 
 .cards-container {
   display: flex;
@@ -83,14 +88,16 @@ body {
   justify-content: space-between;
   padding: 32px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.30);
-  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 0.15s ease;
+border: 2px solid rgba(255, 255, 255, 0.80);
+background: rgba(255, 255, 255, 0.30);
+
+/* glass accelerator eff */
+box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25) inset, 0px 0px 60px 10px rgba(0, 0, 0, 0.25);
+backdrop-filter: blur(9px);
+box-shadow: #070D09;
+  transition: all 0.3s ease;
 }
 
-.first-card-container:hover {
-  box-shadow: 0px 0px 70px 0px rgba(15, 244, 134, 0.50);
-}
 
 .image-container-first {
   width: 100%;
@@ -105,11 +112,13 @@ body {
 }
 
 .button-text {
-  font-family: inherit;
-  color: white;
-  font-size: .875rem !important;
-  line-height: 1.25rem !important;
-  font-weight: 600 !important;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 600;
+  padding-right: 16px;
+  padding-left: 16px;
+  font-family: "League Spartan";
+  font-weight: 700;
 }
 
 .first-button {
@@ -128,21 +137,23 @@ body {
 }
 
 .second-button {
-  background-color: #92b93c;
+  color: black;
+  background-color: #E2FFA5;
   border: none;
   border-radius: 99999px;
   height: fit-content;
   width: fit-content;
-  height: 45px;
+  height: 40px;
   margin-right: 16px;
   margin-left: 16px;
   cursor: pointer;
-  transition: background 0.1s ease;
+  transition: all 0.3s ease;
   width: 90%;
 }
 
 .second-button:hover {
-  background-color: #BC5727;
+  background-color: #aec282;
+  scale: 1.05;
 }
 
 
@@ -175,6 +186,7 @@ body {
 .little-text {
   color: white;
   margin-bottom: 8px;
+  font-size: 20px;
 }
 
 
@@ -198,7 +210,8 @@ body {
 
   .hero-section-blur-top,
   .hero-section-blur-bottom {
-    width: 1000;
+    left:0px;
+    width: 100%;
     height: 140px;
     flex-shrink: 0;
     border-radius: 1200px;
