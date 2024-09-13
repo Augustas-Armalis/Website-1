@@ -1742,7 +1742,7 @@ footer{
     flex-direction: column;
     padding-top: 64px;
     width: 100%;
-    margin: 32px;
+    margin: 16px;
     margin-bottom: 0px;
     gap: 48px;
   }
