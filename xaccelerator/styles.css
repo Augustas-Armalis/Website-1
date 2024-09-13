@@ -203,11 +203,12 @@ h3 {
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 500;
+  font-size: 30px;
 }
 
 .hero-section-left-side {
   height: fit-content;
-  flex: 1.8;
+  flex: 2;
 }
 
 
@@ -225,14 +226,17 @@ h3 {
   margin-right: -99999px;
   height: 650px;
   border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.80);
   background: rgba(255, 255, 255, 0.30);
-  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25) inset, 0px 0px 60px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(9px);
   backdrop-filter: blur(9px);
   display: flex;
   align-items: center;
   justify-content: start;
   top: 0;
   padding: 36px;
+  transition: all 0.15s ease;
 }
 
 .image-container img {
@@ -256,19 +260,22 @@ h3 {
 
 
 .hero-section-button {
-  width: 166px;
+  width: fit-content;
+  padding-right: 20px;
+  padding-left: 20px;
   height: 45px;
   flex-shrink: 0;
   border-radius: 52px;
   background: #E2FFA5;
   border: none;
   padding-top: 5px;
-  transition: background 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .hero-section-button:hover {
   background: #b1cf72;
   cursor: pointer;
+  scale: 1.05;
 }
 
 .hero-section-CTA {
@@ -304,7 +311,7 @@ h3 {
   align-items: center;
   flex-direction: column;
   gap: 8px;
-  margin-top: 128px;
+  margin-top: 92px;
 }
 
 .not-only-one-title {
@@ -317,8 +324,8 @@ h3 {
 }
 
 #not-only-one-image-container {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.30);
   box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
@@ -340,7 +347,7 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 380px;
+  width: 500px;
   margin-top: 64px;
 }
 
@@ -365,7 +372,8 @@ h3 {
   margin-top: 32px;
   margin-bottom: 16px;
   text-align: center;
-  font-size: 36px;
+  font-size: 42px;
+
 }
 
 .not-only-one-point-alt {
@@ -374,21 +382,24 @@ h3 {
 }
 
 .not-only-one-button {
-  width: 364px;
-  height: 50px;
+  width: fit-content;
+  height: 45px;
+  padding-right: 36px;
+  padding-left: 36px;
   border-radius: 52px;
   background: #09381F;
   box-shadow: 0px 6px 20.9px 0px rgba(0, 0, 0, 0.25);
   border: none;
   padding-top: 5px;
-  margin-top: 64px;
+  margin-top: 128px;
   margin-bottom: 128px;
   cursor: pointer;
-  transition: background 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .not-only-one-button:hover {
   background: #051a0f;
+  scale: 1.05;
 }
 
 .not-only-one-button-text {
@@ -422,13 +433,14 @@ h3 {
   max-width: 1200px;
   height: fit-content;
   border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.80);
   background: rgba(255, 255, 255, 0.30);
-  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25) inset, 0px 0px 60px 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(9px);
   display: flex;
   justify-content: center;
   align-items: stretch;
-  padding: 64px;
+  padding: 32px;
   gap: 64px;
   margin-top: 128px;
   margin-bottom: 128px;
@@ -469,12 +481,13 @@ h3 {
   padding-top: 5px;
   padding-left: 32px;
   padding-right: 32px;
-  transition: background 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .coach-section-button:hover {
   background: #b1cf72;
   cursor: pointer;
+  scale: 1.05;
 }
 
 .coach-section-CTA {
@@ -539,7 +552,6 @@ h3 {
   max-width: 1200px;
   width: 100%;
   height: fit-content;
-  align-items: center;
   gap: 64px;
   margin: 128px 64px;
 }
@@ -570,10 +582,11 @@ h3 {
   box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(9px);
   height: fit-content;
-  padding-top: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
+
 
 .thirty-bulet-list-row-container {
   display: flex;
@@ -582,7 +595,7 @@ h3 {
   width: auto;
   height: fit-content;
   font-size: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 
 .thirty-button {
@@ -596,11 +609,12 @@ h3 {
   cursor: pointer;
   padding-left: 32px;
   padding-right: 32px;
-  transition: background 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .thirty-button:hover {
   background: #051a0f;
+  scale: 1.05;
 }
 
 .thirty-button-text {
@@ -779,12 +793,35 @@ h3 {
 }
 
 #expectations-image-container {
-  width: 100%;
-  height: auto;
+  width: 100px;
+  height: 100px;
   display: inline-block;
   border-radius: 20px;
   overflow: hidden;
+  position: absolute;
+  top: -54px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border: 1.5px solid rgba(255, 255, 255, 0.80);
+  background: linear-gradient(121deg, rgba(255, 255, 255, 0.50) 0%, rgba(153, 153, 153, 0.30) 100%);
+
+  /* Glass effect */
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25) inset, 0px 0px 60px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* Background image */
+  background: url("images/image.png");
+  background-size: cover;
+  /* Make the image cover the entire container */
+  background-position: center;
+  /* Center the image inside the container */
+  background-repeat: no-repeat;
+  /* Prevent the image from repeating */
 }
+
 
 .expectations-image-itself {
   width: 100%;
@@ -808,9 +845,9 @@ h3 {
   width: 380px;
   margin-top: 64px;
   border-radius: 20px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.30);
-  box-shadow: -13px 19px 40.7px 0px rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--accelerator-glass-bord, rgba(255, 255, 255, 0.80));
+  background: var(--accelerator-body-back, linear-gradient(121deg, rgba(255, 255, 255, 0.30) 0%, rgba(153, 153, 153, 0.30) 100%));
+  box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.25) inset, 0px 0px 60px 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(9px);
 }
 
@@ -833,10 +870,10 @@ h3 {
 }
 
 .expectations-point-title {
-  margin-top: 32px;
+  margin-top: 100px;
   margin-bottom: 16px;
   text-align: center;
-  font-size: 40px;
+  font-size: 42px;
   color: #ffffff;
 }
 
@@ -1269,7 +1306,6 @@ footer {
 
 
 
-
   /* You're not the only one section */
 
   .not-only-one-points-section {
@@ -1280,7 +1316,6 @@ footer {
   .not-only-one-second-point,
   .not-only-one-third-point {
     margin: 0px;
-
   }
 
   .not-only-one-first-point {
@@ -1294,10 +1329,12 @@ footer {
 
   .not-only-one-title-section {
     margin-top: 64px;
+    margin-bottom: 16px;
   }
 
   .not-only-one-button {
-    margin-bottom: 64px;
+    margin-top: 32px;
+    margin-bottom: 92px;
   }
 
 
@@ -1413,6 +1450,11 @@ footer {
   }
 
 
+  .hero-section-CTA {
+    font-size: 30px;
+  }
+
+
 
 
   /* Hero section */
@@ -1432,7 +1474,7 @@ footer {
 
   .hero-section-alt-text {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 64px;
     font-size: 20px;
   }
 
@@ -1470,11 +1512,12 @@ footer {
     width: fit-content;
     margin-left: 32px;
     margin-right: 32px;
+    margin-bottom: 64px;
   }
 
   #not-only-one-image-container {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
   .not-only-one-button {
@@ -1642,6 +1685,16 @@ footer {
 
   .offer-spots-container {
     left: -20px;
+  }
+
+
+
+  .not-only-one-point-title {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 32px;
+
   }
 
 

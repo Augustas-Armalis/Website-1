@@ -29,12 +29,9 @@
 
     <div class="first-card-container">
       <p id="quicksand" class="little-text">Crypto</p>
-      <button class="second-button" onclick="window.location.href='https://app.hel.io/pay/66a0670e6b8d7a9d6116bb25'">
-        <!--  HELIO LINK -->
+      <button class="first-button" onclick="window.location.href='#'">
         <div class="button-container-helio">
-          <div id="helioCheckoutContainer">
-            <a class="button-text">PAY WITH HELIO</a>
-          </div>
+          <div id="helioCheckoutContainer"></div>
         </div>
       </button>
       <p id="quicksand" class="little-text">Fiat</p>
@@ -55,7 +52,22 @@
   <script type="module" crossorigin src="https://embed.hel.io/assets/index-v1.js"></script>
 
   <script>
-  
+    document.addEventListener("DOMContentLoaded", () => {
+      window.helioCheckout(
+        document.getElementById("helioCheckoutContainer"),
+        {
+          paylinkId: "66a0670e6b8d7a9d6116bb25",
+          theme: { "colors": { "primaryButtonBackground": "#92b93c", "primaryButtonText": "#F1EFE7" } },
+          display: "button",
+          onSuccess: event => console.log(event),
+          onError: event => console.log(event),
+          onPending: event => console.log(event),
+          onCancel: () => console.log("Cancelled payment"),
+          onStartPayment: () => console.log("Starting payment"),
+        }
+      );
+    });
+  </script>
 
   <style>
     .button-container-helio {
