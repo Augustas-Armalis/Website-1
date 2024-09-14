@@ -244,3 +244,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+
+    window.history.replaceState(null, null, ' ');
+  });
+});
+
+function scrollToSection(id) {
+  const targetElement = document.getElementById(id);
+
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+
+    setTimeout(() => {
+      window.history.replaceState(null, null, ' ');
+    }, 100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    const newImg = new Image();
+    newImg.src = img.src;
+  });
+});

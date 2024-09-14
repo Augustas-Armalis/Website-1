@@ -1393,6 +1393,16 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
   height: 20px;
 }
 
+.aweb-container-text{
+transition: all 0.3s;
+display: flex;
+gap: 8px;
+margin-right: 32px;
+text-decoration: none;
+align-items: center;
+justify-content: center;
+}
+
 .aweb-container-text:hover {
   scale: 1.05;
   font-weight: 700;
@@ -1508,7 +1518,7 @@ input:not(:checked)+.toggle-label #toggle-text-founders {
   }
 
   .aweb-container-text {
-    margin-right: 8px;
+    margin-right: 0px;
     margin-bottom: 8px;
     display: flex;
     justify-content: center;
