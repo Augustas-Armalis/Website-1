@@ -291,13 +291,6 @@ h3 {
 
 
 
-
-
-
-
-
-
-
 /* You're not the only one section */
 
 .not-only-one-section {
@@ -348,7 +341,7 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 500px;
+  width: 400px;
   margin-top: 64px;
 }
 
@@ -380,6 +373,8 @@ h3 {
 .not-only-one-point-alt {
   text-align: center;
   color: #616161;
+  font-size: 24px;
+  width: 400px;
 }
 
 .not-only-one-button {
@@ -1477,7 +1472,7 @@ footer{
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
 
   .logo {
     margin-top: 24px;
@@ -1610,6 +1605,14 @@ footer{
 
 
 @media (max-width: 599px) {
+
+
+  .not-only-one-point-alt{
+font-size: 20px;
+width: fit-content;
+padding-right: 16px;
+padding-left: 16px;
+  }
 
 
 
@@ -1793,6 +1796,7 @@ footer{
     margin-left: 32px;
     margin-right: 32px;
     margin-bottom: 64px;
+    width: 100vw;
   }
 
   #not-only-one-image-container {
